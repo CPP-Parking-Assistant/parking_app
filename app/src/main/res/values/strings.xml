@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CPP Parking Assistant</string>
+    <string name="title">Cal Poly Pomona Parking Assistant</string>
+    <string name="selection">\n\nMake a Selection</string>
+    <string name="ride">I Need A Ride\n Back To My Car</string>
+    <string name="park">I Need A \nParking Space</string>
+</resources>
