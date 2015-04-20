@@ -4,4 +4,26 @@
     <string name="selection">\n\nMake a Selection</string>
     <string name="ride">I Need A Ride\n Back To My Car</string>
     <string name="park">I Need A \nParking Space</string>
+    <string name="leave">I Am Leaving\nMy Parking Spot</string>
+
+    <string name="maleText">Male</string>
+    <string name="femaleText">Female</string>
+    <string name="form1Msg">Enter a description about yourself and your car.</string>
+    <string name="form1EditText">i.e. brown hair and red t-shirt in black Toyota Camry.</string>
+    <string name="form1Submit">Submit</string>
+
+    <string name="form2Msg">Select a parking spot or student to pick up. Parking spots are in green. Students are in yellow.</string>
+
+    <string name="arrive1msg">Press the button below once you arrive at the students location</string>
+    <string name="arrive1Button">Arrived!</string>
+    <string name="arrive2msg">Press the button below once you arrive at the students parking location</string>
+
+    <string name="thanks">Thank You!</string>
+    <string name="exit">Exit App</string>
+
+    <string name="leaving">Select the approximate location your car is parked on the map by long pressing on it. You may zoom in for better accuracy.</string>
+    <string name="thanks2Msg">You will be notified when your driver arrives at your parking location.</string>
+
+    <string name="leaveMsg">Enter a description of your car and its location. </string>
+    <string name="leaveHint">i.e. Blue Honda Civic, parking structure, section 3C</string>
 </resources>

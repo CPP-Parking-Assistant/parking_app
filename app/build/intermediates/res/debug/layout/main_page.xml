@@ -50,4 +50,15 @@
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content" />
          </LinearLayout>
+        <Button
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:padding="10dp"
+            android:id="@+id/leaveButton"
+            android:background="@color/darkgreen"
+            android:textColor="@color/gold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/leave"/>
 </LinearLayout><!-- From: file:/C:/Users/Elliot/AndroidStudioProjects/CPPParkingAssistant/app/src/main/res/layout/main_page.xml -->
