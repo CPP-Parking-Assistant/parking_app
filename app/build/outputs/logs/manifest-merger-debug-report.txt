@@ -229,6 +229,18 @@ activity#com.cpp.elliot.cppparkingassistant.ThanksActivity2
 ADDED from AndroidManifest.xml:42:9
 	android:name
 		ADDED from AndroidManifest.xml:42:19
+activity#com.cpp.elliot.cppparkingassistant.RideActivity1
+ADDED from AndroidManifest.xml:43:9
+	android:name
+		ADDED from AndroidManifest.xml:43:19
+activity#com.cpp.elliot.cppparkingassistant.RideActivity2
+ADDED from AndroidManifest.xml:44:9
+	android:name
+		ADDED from AndroidManifest.xml:44:19
+activity#com.cpp.elliot.cppparkingassistant.ThanksActivity3
+ADDED from AndroidManifest.xml:45:9
+	android:name
+		ADDED from AndroidManifest.xml:45:19
 uses-sdk
 INJECTED from AndroidManifest.xml:0:0 reason: use-sdk injection requested
 MERGED from com.android.support:appcompat-v7:22.0.0:20:5

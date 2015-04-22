@@ -306,10 +306,14 @@ available. Please contact the developer for assistance.</string>
     <string name="leave">I Am Leaving\nMy Parking Spot</string>
     <string name="leaveHint">i.e. Blue Honda Civic, parking structure, section 3C</string>
     <string name="leaveMsg">Enter a description of your car and its location. </string>
-    <string name="leaving">Select the approximate location your car is parked on the map by long pressing on it. You may zoom in for better accuracy.</string>
+    <string name="leaving">Select the approximate location your car is parked on the map by long pressing on it. Zoom in for better accuracy.</string>
     <string name="maleText">Male</string>
+    <string name="myLocation">Use My Location.</string>
     <string name="park">I Need A \nParking Space</string>
     <string name="ride">I Need A Ride\n Back To My Car</string>
+    <string name="rideHint">i.e. black hair, red shirt, blue pants.</string>
+    <string name="rideText">Select the approximate location you will be waiting on the map by long pressing on it. Zoom in for better accuracy.</string>
+    <string name="rideText2">Enter a description of yourself.</string>
     <string name="selection">\n\nMake a Selection</string>
     <!-- From: file:/C:/Users/Elliot/AndroidStudioProjects/CPPParkingAssistant/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.0.0/res/values/admob_strings.xml -->
     <eat-comment/>
@@ -319,6 +323,7 @@ available. Please contact the developer for assistance.</string>
     <eat-comment/>
     <string name="thanks">Thank You!</string>
     <string name="thanks2Msg">You will be notified when your driver arrives at your parking location.</string>
+    <string name="thanks3Msg">You will be notified when your driver arrives at your location.</string>
     <string name="title">Cal Poly Pomona Parking Assistant</string>
     <!-- From: file:/C:/Users/Elliot/AndroidStudioProjects/CPPParkingAssistant/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.0.0/res/values/wallet_strings.xml -->
     <eat-comment/>

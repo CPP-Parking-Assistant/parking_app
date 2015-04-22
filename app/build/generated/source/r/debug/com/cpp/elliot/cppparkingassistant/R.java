@@ -1786,6 +1786,7 @@ containing a value of this type.
         public static final int leavingText=0x7f0b0055;
         public static final int listMode=0x7f0b0009;
         public static final int list_item=0x7f0b003a;
+        public static final int locationButton=0x7f0b006d;
         public static final int main=0x7f0b005a;
         public static final int maleCheck=0x7f0b0063;
         public static final int match_parent=0x7f0b002b;
@@ -1808,6 +1809,13 @@ containing a value of this type.
         public static final int progress_horizontal=0x7f0b0006;
         public static final int radio=0x7f0b0040;
         public static final int rideButton=0x7f0b005c;
+        public static final int rideButton2=0x7f0b0071;
+        public static final int rideButton3=0x7f0b006c;
+        public static final int rideEditText=0x7f0b0070;
+        public static final int rideFemaleCheck=0x7f0b006f;
+        public static final int rideMaleCheck=0x7f0b006e;
+        public static final int rideMap=0x7f0b006b;
+        public static final int rideText=0x7f0b006a;
         public static final int sandbox=0x7f0b0027;
         public static final int satellite=0x7f0b001a;
         public static final int search_badge=0x7f0b004a;
@@ -1876,7 +1884,10 @@ containing a value of this type.
         public static final int parkform1=0x7f04001c;
         public static final int parkform2=0x7f04001d;
         public static final int parkthankyou=0x7f04001e;
-        public static final int support_simple_spinner_dropdown_item=0x7f04001f;
+        public static final int rideform1=0x7f04001f;
+        public static final int rideform2=0x7f040020;
+        public static final int ridethankyou=0x7f040021;
+        public static final int support_simple_spinner_dropdown_item=0x7f040022;
     }
     public static final class mipmap {
         public static final int ic_launcher=0x7f030000;
@@ -1951,15 +1962,20 @@ containing a value of this type.
         public static final int leaveMsg=0x7f0d003f;
         public static final int leaving=0x7f0d0040;
         public static final int maleText=0x7f0d0041;
-        public static final int park=0x7f0d0042;
-        public static final int ride=0x7f0d0043;
-        public static final int selection=0x7f0d0044;
-        public static final int store_picture_message=0x7f0d0045;
-        public static final int store_picture_title=0x7f0d0046;
-        public static final int thanks=0x7f0d0047;
-        public static final int thanks2Msg=0x7f0d0048;
-        public static final int title=0x7f0d0049;
-        public static final int wallet_buy_button_place_holder=0x7f0d004a;
+        public static final int myLocation=0x7f0d0042;
+        public static final int park=0x7f0d0043;
+        public static final int ride=0x7f0d0044;
+        public static final int rideHint=0x7f0d0045;
+        public static final int rideText=0x7f0d0046;
+        public static final int rideText2=0x7f0d0047;
+        public static final int selection=0x7f0d0048;
+        public static final int store_picture_message=0x7f0d0049;
+        public static final int store_picture_title=0x7f0d004a;
+        public static final int thanks=0x7f0d004b;
+        public static final int thanks2Msg=0x7f0d004c;
+        public static final int thanks3Msg=0x7f0d004d;
+        public static final int title=0x7f0d004e;
+        public static final int wallet_buy_button_place_holder=0x7f0d004f;
     }
     public static final class style {
         public static final int Animation_AppCompat_DropDownUp=0x7f0e0000;

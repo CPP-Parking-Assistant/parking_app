@@ -40,5 +40,8 @@
         <activity android:name=".LeaveActivity"/>
         <activity android:name=".LeaveActivity2"/>
         <activity android:name=".ThanksActivity2"/>
+        <activity android:name=".RideActivity1"/>
+        <activity android:name=".RideActivity2"/>
+        <activity android:name=".ThanksActivity3"/>
     </application>
 </manifest>

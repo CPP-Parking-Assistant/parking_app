@@ -11,7 +11,7 @@ import android.widget.Toast;
 public class LeaveActivity2 extends Activity {
     Button leavingButton2;
     EditText leaveEditText;
-    LeavingStudent student = new LeavingStudent();
+    LeavingStudent lStudent = new LeavingStudent();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,8 +21,8 @@ public class LeaveActivity2 extends Activity {
         leavingButton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                student.setCar(leaveEditText.getText()+"");
-                Toast.makeText(LeaveActivity2.this, student.toString(), Toast.LENGTH_LONG).show();
+                lStudent.setCar(leaveEditText.getText()+"");
+                Toast.makeText(LeaveActivity2.this, lStudent.toString(), Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(LeaveActivity2.this, ThanksActivity2.class);
                 startActivity(intent);
             }

@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 public class ParkingActivity extends Activity {
     Button parkButton, rideButton, leaveButton, parkForm1Button;
@@ -29,7 +28,8 @@ public class ParkingActivity extends Activity {
         rideButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(ParkingActivity.this, "Ride Button!", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(ParkingActivity.this,RideActivity1.class);
+                startActivity(intent);
             }
         });
         leaveButton.setOnClickListener(new View.OnClickListener(){

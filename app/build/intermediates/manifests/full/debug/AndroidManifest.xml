@@ -53,6 +53,9 @@
         <activity android:name="com.cpp.elliot.cppparkingassistant.LeaveActivity" />
         <activity android:name="com.cpp.elliot.cppparkingassistant.LeaveActivity2" />
         <activity android:name="com.cpp.elliot.cppparkingassistant.ThanksActivity2" />
+        <activity android:name="com.cpp.elliot.cppparkingassistant.RideActivity1" />
+        <activity android:name="com.cpp.elliot.cppparkingassistant.RideActivity2" />
+        <activity android:name="com.cpp.elliot.cppparkingassistant.ThanksActivity3" />
     </application>
 
 </manifest>

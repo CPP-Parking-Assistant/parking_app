@@ -13,7 +13,7 @@ public class ParkForm1Activity extends Activity {
     Button parkForm1Button;
     CheckBox maleCheck,femaleCheck;
     EditText parkForm1EditText;
-    ParkingStudent student = new ParkingStudent();
+    ParkingStudent pStudent = new ParkingStudent();
     boolean genderChosen = false;
 
     @Override
@@ -28,17 +28,17 @@ public class ParkForm1Activity extends Activity {
             @Override
             public void onClick(View v) {
                 if (maleCheck.isChecked() && !femaleCheck.isChecked()) {
-                    student.setGender("Male");
+                    pStudent.setGender("Male");
                     genderChosen = true;
                 }
                 else if (!maleCheck.isChecked() && femaleCheck.isChecked()) {
-                    student.setGender("Female");
+                    pStudent.setGender("Female");
                     genderChosen = true;
                 }
                 else
-                    student.setGender("Unknown Gender");
-                student.setDescription(parkForm1EditText.getText()+"");
-                Toast.makeText(ParkForm1Activity.this,student.toString(), Toast.LENGTH_LONG).show();
+                    pStudent.setGender("Unknown Gender");
+                pStudent.setDescription(parkForm1EditText.getText()+"");
+                Toast.makeText(ParkForm1Activity.this, pStudent.toString(), Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(ParkForm1Activity.this, ParkForm2Activity.class);
                 startActivity(intent);
             }

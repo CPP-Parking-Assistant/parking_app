@@ -16,20 +16,6 @@
         <dex dex="C:\Users\Elliot\AndroidStudioProjects\CPPParkingAssistant\app\build\intermediates\pre-dexed\debug\classes-4303bd63c8833a21dc91b719b2a28632454ca545.jar" />
     </item>
     <item
-        jar="C:\Users\Elliot\AndroidStudioProjects\CPPParkingAssistant\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\7.0.0\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="41b3870cbe5fa546d8095b5b89d42cb69f3dd175">
-        <dex dex="C:\Users\Elliot\AndroidStudioProjects\CPPParkingAssistant\app\build\intermediates\pre-dexed\debug\classes-f9070419b4d6b8fc40bb5eb853c7313ef336bd12.jar" />
-    </item>
-    <item
-        jar="C:\Users\Elliot\AndroidStudioProjects\CPPParkingAssistant\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\7.0.0\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="1c5a76debf0c2857ccad422c4a80ed785982f8df">
-        <dex dex="C:\Users\Elliot\AndroidStudioProjects\CPPParkingAssistant\app\build\intermediates\pre-dexed\debug\classes-9270c0ae2196e6b33e1ec20de360158c552e552f.jar" />
-    </item>
-    <item
         jar="C:\Users\Elliot\AndroidStudioProjects\CPPParkingAssistant\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-games\7.0.0\classes.jar"
         jumboMode="false"
         revision="21.1.2"
@@ -42,34 +28,6 @@
         revision="21.1.2"
         sha1="fb04b12526b0073c7fb1ebb70c5842d82ee95596">
         <dex dex="C:\Users\Elliot\AndroidStudioProjects\CPPParkingAssistant\app\build\intermediates\pre-dexed\debug\classes-2d16c253ec5989d0133495e5cdb897e82c93f4ed.jar" />
-    </item>
-    <item
-        jar="C:\Users\Elliot\AndroidStudioProjects\CPPParkingAssistant\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\7.0.0\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="3033cc3a2c68dff3e5b646d6d084bdbdf7d00b25">
-        <dex dex="C:\Users\Elliot\AndroidStudioProjects\CPPParkingAssistant\app\build\intermediates\pre-dexed\debug\classes-7dedef656636012d7663a28be313395e6651cb20.jar" />
-    </item>
-    <item
-        jar="C:\Users\Elliot\AndroidStudioProjects\CPPParkingAssistant\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\7.0.0\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="c976518693e89ad44fbfccfc654941eaec198d08">
-        <dex dex="C:\Users\Elliot\AndroidStudioProjects\CPPParkingAssistant\app\build\intermediates\pre-dexed\debug\classes-3f7489c6019d029baf20c3eb2e0893ba255634e0.jar" />
-    </item>
-    <item
-        jar="C:\Users\Elliot\AndroidStudioProjects\CPPParkingAssistant\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.0.0\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
-        <dex dex="C:\Users\Elliot\AndroidStudioProjects\CPPParkingAssistant\app\build\intermediates\pre-dexed\debug\classes-4be4e7202e78d1fc88644ceb09f319ab940c29a6.jar" />
-    </item>
-    <item
-        jar="C:\Users\Elliot\AndroidStudioProjects\CPPParkingAssistant\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\7.0.0\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="4cd0b093824b3228fffc21ea369b98d0b1db6566">
-        <dex dex="C:\Users\Elliot\AndroidStudioProjects\CPPParkingAssistant\app\build\intermediates\pre-dexed\debug\classes-3a55e8f303053dcbbaca9d11d5119c0dc63386e7.jar" />
     </item>
     <item
         jar="C:\Users\Elliot\AndroidStudioProjects\CPPParkingAssistant\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\7.0.0\classes.jar"
@@ -100,11 +58,60 @@
         <dex dex="C:\Users\Elliot\AndroidStudioProjects\CPPParkingAssistant\app\build\intermediates\pre-dexed\debug\classes-0fadd5bcec3d25bf85ba8ce4227e5ffa03818a89.jar" />
     </item>
     <item
-        jar="C:\Users\Elliot\AndroidStudioProjects\CPPParkingAssistant\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appstate\7.0.0\classes.jar"
+        jar="C:\Users\Elliot\AndroidStudioProjects\CPPParkingAssistant\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\7.0.0\classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="7ff613bf78ab057293892fdbd4169eda899c89b9">
-        <dex dex="C:\Users\Elliot\AndroidStudioProjects\CPPParkingAssistant\app\build\intermediates\pre-dexed\debug\classes-60270ff549bc976efa401858eb8bab5ea7e79402.jar" />
+        sha1="e3d791b42eaa90416cd0b2d2e608092794a3baa4">
+        <dex dex="C:\Users\Elliot\AndroidStudioProjects\CPPParkingAssistant\app\build\intermediates\pre-dexed\debug\classes-53d795df09c70721d94d4495ce3471d855983c17.jar" />
+    </item>
+    <item
+        jar="C:\Users\Elliot\AndroidStudioProjects\CPPParkingAssistant\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.0.0\libs\internal_impl-22.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="b5b92f469d515a13d778900f6d50c03d12f35504">
+        <dex dex="C:\Users\Elliot\AndroidStudioProjects\CPPParkingAssistant\app\build\intermediates\pre-dexed\debug\internal_impl-22.0.0-d26d9d692fcb36644b6c25aefe777b8cbaec5631.jar" />
+    </item>
+    <item
+        jar="C:\Users\Elliot\AndroidStudioProjects\CPPParkingAssistant\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\7.0.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="1c5a76debf0c2857ccad422c4a80ed785982f8df">
+        <dex dex="C:\Users\Elliot\AndroidStudioProjects\CPPParkingAssistant\app\build\intermediates\pre-dexed\debug\classes-9270c0ae2196e6b33e1ec20de360158c552e552f.jar" />
+    </item>
+    <item
+        jar="C:\Users\Elliot\AndroidStudioProjects\CPPParkingAssistant\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\7.0.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="41b3870cbe5fa546d8095b5b89d42cb69f3dd175">
+        <dex dex="C:\Users\Elliot\AndroidStudioProjects\CPPParkingAssistant\app\build\intermediates\pre-dexed\debug\classes-f9070419b4d6b8fc40bb5eb853c7313ef336bd12.jar" />
+    </item>
+    <item
+        jar="C:\Users\Elliot\AndroidStudioProjects\CPPParkingAssistant\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\7.0.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="c976518693e89ad44fbfccfc654941eaec198d08">
+        <dex dex="C:\Users\Elliot\AndroidStudioProjects\CPPParkingAssistant\app\build\intermediates\pre-dexed\debug\classes-3f7489c6019d029baf20c3eb2e0893ba255634e0.jar" />
+    </item>
+    <item
+        jar="C:\Users\Elliot\AndroidStudioProjects\CPPParkingAssistant\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\7.0.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="3033cc3a2c68dff3e5b646d6d084bdbdf7d00b25">
+        <dex dex="C:\Users\Elliot\AndroidStudioProjects\CPPParkingAssistant\app\build\intermediates\pre-dexed\debug\classes-7dedef656636012d7663a28be313395e6651cb20.jar" />
+    </item>
+    <item
+        jar="C:\Users\Elliot\AndroidStudioProjects\CPPParkingAssistant\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.0.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
+        <dex dex="C:\Users\Elliot\AndroidStudioProjects\CPPParkingAssistant\app\build\intermediates\pre-dexed\debug\classes-4be4e7202e78d1fc88644ceb09f319ab940c29a6.jar" />
+    </item>
+    <item
+        jar="C:\Users\Elliot\AndroidStudioProjects\CPPParkingAssistant\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\7.0.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4cd0b093824b3228fffc21ea369b98d0b1db6566">
+        <dex dex="C:\Users\Elliot\AndroidStudioProjects\CPPParkingAssistant\app\build\intermediates\pre-dexed\debug\classes-3a55e8f303053dcbbaca9d11d5119c0dc63386e7.jar" />
     </item>
     <item
         jar="C:\Users\Elliot\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.0.0\support-annotations-22.0.0.jar"
@@ -112,6 +119,13 @@
         revision="21.1.2"
         sha1="685d0b2c590447e85284ed84712cb363ba04eff8">
         <dex dex="C:\Users\Elliot\AndroidStudioProjects\CPPParkingAssistant\app\build\intermediates\pre-dexed\debug\support-annotations-22.0.0-a280c43a478710f8300578f011697cbc2e9df9c7.jar" />
+    </item>
+    <item
+        jar="C:\Users\Elliot\AndroidStudioProjects\CPPParkingAssistant\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appstate\7.0.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="7ff613bf78ab057293892fdbd4169eda899c89b9">
+        <dex dex="C:\Users\Elliot\AndroidStudioProjects\CPPParkingAssistant\app\build\intermediates\pre-dexed\debug\classes-60270ff549bc976efa401858eb8bab5ea7e79402.jar" />
     </item>
     <item
         jar="C:\Users\Elliot\AndroidStudioProjects\CPPParkingAssistant\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\7.0.0\classes.jar"
@@ -135,13 +149,6 @@
         <dex dex="C:\Users\Elliot\AndroidStudioProjects\CPPParkingAssistant\app\build\intermediates\pre-dexed\debug\classes-033325d08222719702a3f01ed33e9e71d76002e2.jar" />
     </item>
     <item
-        jar="C:\Users\Elliot\AndroidStudioProjects\CPPParkingAssistant\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\7.0.0\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="e3d791b42eaa90416cd0b2d2e608092794a3baa4">
-        <dex dex="C:\Users\Elliot\AndroidStudioProjects\CPPParkingAssistant\app\build\intermediates\pre-dexed\debug\classes-53d795df09c70721d94d4495ce3471d855983c17.jar" />
-    </item>
-    <item
         jar="C:\Users\Elliot\AndroidStudioProjects\CPPParkingAssistant\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\7.0.0\classes.jar"
         jumboMode="false"
         revision="21.1.2"
@@ -154,13 +161,6 @@
         revision="21.1.2"
         sha1="ef5f051e7308febe289dc93c67c5f32785b4260a">
         <dex dex="C:\Users\Elliot\AndroidStudioProjects\CPPParkingAssistant\app\build\intermediates\pre-dexed\debug\classes-31c6a458589e47f50665241b0f550444f6849681.jar" />
-    </item>
-    <item
-        jar="C:\Users\Elliot\AndroidStudioProjects\CPPParkingAssistant\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.0.0\libs\internal_impl-22.0.0.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="b5b92f469d515a13d778900f6d50c03d12f35504">
-        <dex dex="C:\Users\Elliot\AndroidStudioProjects\CPPParkingAssistant\app\build\intermediates\pre-dexed\debug\internal_impl-22.0.0-d26d9d692fcb36644b6c25aefe777b8cbaec5631.jar" />
     </item>
 
 </items>

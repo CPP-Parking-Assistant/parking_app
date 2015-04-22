@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/structure">
+    <TextView
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_margin="15dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/rideText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rideText"
+        android:textColor="@color/gold"
+        android:textSize="25sp"/>
+    <fragment
+        android:layout_below="@id/rideText"
+        android:id="@+id/rideMap"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:name="com.google.android.gms.maps.MapFragment"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="130dp"/>
+    <Button
+        android:id="@+id/rideButton3"
+        android:textColor="@color/gold"
+        android:background="@color/darkgreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/form1Submit"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp" />
+    <Button
+        android:id="@+id/locationButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/gold"
+        android:background="@color/darkgreen"
+        android:text="@string/myLocation"
+        android:padding="5dp"
+        android:layout_above="@+id/rideButton3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"/>
+</RelativeLayout>
