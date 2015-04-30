@@ -11,7 +11,6 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.MarkerOptions;
 
 public class ParkForm2Activity extends Activity {
     private GoogleMap map;
@@ -24,12 +23,6 @@ public class ParkForm2Activity extends Activity {
         map = ((MapFragment) getFragmentManager().findFragmentById(R.id.parkMap)).getMap();
         CameraUpdate update = CameraUpdateFactory.newLatLngZoom(CPP,15);
         map.animateCamera(update);
-        map.setOnMapLongClickListener(new GoogleMap.OnMapLongClickListener() {
-            @Override
-            public void onMapLongClick(LatLng latLng) {
-                map.addMarker(new MarkerOptions().position(latLng).title("My Location"));
-            }
-        });
         parkForm2Button = (Button) findViewById(R.id.parkForm2Button);
         parkForm2Button.setOnClickListener(new View.OnClickListener() {
             @Override
