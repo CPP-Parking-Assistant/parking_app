@@ -4,7 +4,7 @@ import com.google.android.gms.maps.model.LatLng;
 import com.parse.ParseClassName;
 import com.parse.ParseObject;
 
-@ParseClassName("LeaveStudent")
+@ParseClassName("LeavingStudent")
 public class LeavingStudent extends ParseObject{
     private String description;
     private LatLng location;

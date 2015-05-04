@@ -49,6 +49,6 @@ public class RideStudent extends ParseObject{
         this.location = location;
     }
     public String toString(){
-        return gender+", "+description+ ", " + location;
+        return gender+", "+description;
     }
 }

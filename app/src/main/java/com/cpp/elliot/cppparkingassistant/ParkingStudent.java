@@ -1,6 +1,10 @@
 package com.cpp.elliot.cppparkingassistant;
 
-public class ParkingStudent {
+import com.parse.ParseClassName;
+import com.parse.ParseObject;
+
+@ParseClassName("ParkingStudent")
+public class ParkingStudent extends ParseObject{
     private String description;
     private String gender;
 
@@ -13,15 +17,17 @@ public class ParkingStudent {
         this.gender = "";
     }
     public String getDescription() {
-        return description;
+        return getString("Description");
     }
     public String getGender() {
-        return gender;
+        return getString("Gender");
     }
     public void setDescription(String description) {
+        put("Description",description);
         this.description = description;
     }
     public void setGender(String gender) {
+        put("Gender",gender);
         this.gender = gender;
     }
     @Override

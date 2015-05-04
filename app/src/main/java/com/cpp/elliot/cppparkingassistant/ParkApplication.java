@@ -10,5 +10,6 @@ public class ParkApplication extends Application {
         Parse.initialize(this, "HhRA2zwLkk89dnb4aeKXIqWuUuVxwiQvJ0opeJhC", "OkE1MPzaMvZWdq5FsaGmkOyNVHWiolTjtJK3P1sB");
         ParseObject.registerSubclass(RideStudent.class);
         ParseObject.registerSubclass(LeavingStudent.class);
+        ParseObject.registerSubclass(ParkingStudent.class);
     }
 }
