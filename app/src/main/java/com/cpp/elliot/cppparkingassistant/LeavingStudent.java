@@ -8,6 +8,7 @@ import com.parse.ParseObject;
 public class LeavingStudent extends ParseObject{
     private String description;
     private LatLng location;
+    private String broncoId;
 
     public LeavingStudent(String car, LatLng location) {
         this.description = car;
@@ -31,6 +32,13 @@ public class LeavingStudent extends ParseObject{
         put("Latitude", location.latitude);
         put("Longitude", location.longitude);
         this.location = location;
+    }
+    public void setBroncoID(String broncoID){
+        put("BroncoId",broncoID);
+        this.broncoId = broncoID;
+    }
+    public String getBroncoId(){
+        return getString("BroncoId");
     }
     public double getLatitude(){
         return getDouble("Latitude");

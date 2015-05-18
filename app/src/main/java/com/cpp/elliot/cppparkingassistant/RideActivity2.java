@@ -13,11 +13,12 @@ import com.google.android.gms.maps.model.LatLng;
 public class RideActivity2 extends Activity {
     Button rideButton2;
     CheckBox maleCheck,femaleCheck;
-    EditText rideEditText;
+    EditText rideEditText, broncoEditText;
     RideStudent rStudent = new RideStudent();
     boolean genderChosen = false;
     double lat,lng;
     LatLng location;
+    String id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +29,7 @@ public class RideActivity2 extends Activity {
         lng = b.getDouble("lng");
         location = new LatLng(lat,lng);
         rideEditText = (EditText) findViewById(R.id.rideEditText);
+        broncoEditText = (EditText) findViewById(R.id.broncoEditText);
         rideButton2 = (Button) findViewById(R.id.rideButton2);
         maleCheck = (CheckBox) findViewById(R.id.rideMaleCheck);
         femaleCheck = (CheckBox) findViewById(R.id.rideFemaleCheck);
@@ -45,10 +47,14 @@ public class RideActivity2 extends Activity {
                 }
                 else
                     rStudent.setGender("Unknown Gender");
-                rStudent.setDescription(rideEditText.getText()+"");
+                rStudent.setDescription(rideEditText.getText() + "");
                 rStudent.setLocation(location);
+                rStudent.setBroncoID(broncoEditText.getText() + "");
                 rStudent.saveInBackground();
+                Bundle b = new Bundle();
+                b.putString("broncoId", broncoEditText.getText() + "");
                 Intent intent = new Intent(RideActivity2.this, ThanksActivity3.class);
+                intent.putExtras(b);
                 startActivity(intent);
             }
         });

@@ -23,25 +23,11 @@
         <dex dex="C:\Users\Elliot\AndroidStudioProjects\CPPParkingAssistant\app\build\intermediates\pre-dexed\debug\classes-4303bd63c8833a21dc91b719b2a28632454ca545.jar" />
     </item>
     <item
-        jar="C:\Users\Elliot\AndroidStudioProjects\CPPParkingAssistant\app\libs\ParseFacebookUtilsV3-1.9.1.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="fef87266c7fcfc92f1536e8d0e1150b465d388d1">
-        <dex dex="C:\Users\Elliot\AndroidStudioProjects\CPPParkingAssistant\app\build\intermediates\pre-dexed\debug\ParseFacebookUtilsV3-1.9.1-a8fc9223689562ffe06da25307ef4295350e14a3.jar" />
-    </item>
-    <item
         jar="C:\Users\Elliot\AndroidStudioProjects\CPPParkingAssistant\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.0.0\classes.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="4c93d99d454c975536bbe3b42283eee847f03ea3">
         <dex dex="C:\Users\Elliot\AndroidStudioProjects\CPPParkingAssistant\app\build\intermediates\pre-dexed\debug\classes-8104cb172f3c4125c797279af4543002ab3a8839.jar" />
-    </item>
-    <item
-        jar="C:\Users\Elliot\AndroidStudioProjects\CPPParkingAssistant\app\libs\ParseCrashReporting-1.9.1.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="2bfbcce5ae61bdd10676df8e89710693c1256024">
-        <dex dex="C:\Users\Elliot\AndroidStudioProjects\CPPParkingAssistant\app\build\intermediates\pre-dexed\debug\ParseCrashReporting-1.9.1-e196b71d8dbf1cb2ddb6da8775cf02089d2b077a.jar" />
     </item>
     <item
         jar="C:\Users\Elliot\AndroidStudioProjects\CPPParkingAssistant\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\7.0.0\classes.jar"
@@ -93,13 +79,6 @@
         <dex dex="C:\Users\Elliot\AndroidStudioProjects\CPPParkingAssistant\app\build\intermediates\pre-dexed\debug\classes-407f6bff17e39bfc616acd32506137747dd2c708.jar" />
     </item>
     <item
-        jar="C:\Users\Elliot\AndroidStudioProjects\CPPParkingAssistant\app\libs\bolts-android-1.2.0-javadoc.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="0b98cf117d6ed838f776a7f0765c7f04191d7b8e">
-        <dex dex="C:\Users\Elliot\AndroidStudioProjects\CPPParkingAssistant\app\build\intermediates\pre-dexed\debug\bolts-android-1.2.0-javadoc-4acd9343c18821058935a0b29f6dc488a9052dc7.jar" />
-    </item>
-    <item
         jar="C:\Users\Elliot\AndroidStudioProjects\CPPParkingAssistant\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\7.0.0\classes.jar"
         jumboMode="false"
         revision="21.1.2"
@@ -119,13 +98,6 @@
         revision="21.1.2"
         sha1="ef5f051e7308febe289dc93c67c5f32785b4260a">
         <dex dex="C:\Users\Elliot\AndroidStudioProjects\CPPParkingAssistant\app\build\intermediates\pre-dexed\debug\classes-31c6a458589e47f50665241b0f550444f6849681.jar" />
-    </item>
-    <item
-        jar="C:\Users\Elliot\AndroidStudioProjects\CPPParkingAssistant\app\libs\ParseFacebookUtilsV4-1.9.1.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="f78e5603a5ecac14eaa34a763c9165444a681193">
-        <dex dex="C:\Users\Elliot\AndroidStudioProjects\CPPParkingAssistant\app\build\intermediates\pre-dexed\debug\ParseFacebookUtilsV4-1.9.1-1419fb0705ef897907eea3d2998a3e2ff134cfd7.jar" />
     </item>
     <item
         jar="C:\Users\Elliot\AndroidStudioProjects\CPPParkingAssistant\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-games\7.0.0\classes.jar"

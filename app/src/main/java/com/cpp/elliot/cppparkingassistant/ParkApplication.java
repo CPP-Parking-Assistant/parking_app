@@ -5,6 +5,7 @@ import android.util.Log;
 
 import com.parse.Parse;
 import com.parse.ParseException;
+import com.parse.ParseInstallation;
 import com.parse.ParseObject;
 import com.parse.ParsePush;
 import com.parse.SaveCallback;
@@ -25,5 +26,6 @@ public class ParkApplication extends Application {
                     Log.e("com.parse.push", "failed to subscribe for push notifications", e);
             }
         });
+        ParseInstallation.getCurrentInstallation().saveInBackground();
     }
 }

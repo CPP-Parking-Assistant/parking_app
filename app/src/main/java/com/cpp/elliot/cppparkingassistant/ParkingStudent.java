@@ -17,10 +17,10 @@ public class ParkingStudent extends ParseObject{
         this.gender = "";
     }
     public String getDescription() {
-        return getString("Description");
+        return description;
     }
     public String getGender() {
-        return getString("Gender");
+        return gender;
     }
     public void setDescription(String description) {
         put("Description",description);

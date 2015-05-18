@@ -22,14 +22,15 @@
     <string name="exit">Exit App</string>
 
     <string name="leaving">Select the approximate location your car is parked on the map by long pressing on it. Zoom in for better accuracy.</string>
-    <string name="thanks2Msg">You will be notified when your driver arrives at your parking location.</string>
+    <string name="thanks2Msg">You will be notified via text message when your driver arrives at your parking location.</string>
 
-    <string name="leaveMsg">Enter a description of your car and its location. </string>
-    <string name="leaveHint">i.e. Blue Honda Civic, parking structure, section 3C</string>
+    <string name="leaveMsg">Fill in the information below</string>
+    <string name="leaveHint">Description of your car and its location. i.e. Blue Honda Civic, parking structure, section 3C</string>
 
     <string name="rideText">Select the approximate location you will be waiting on the map by long pressing on it. Zoom in for better accuracy.</string>
-    <string name="rideText2">Enter a description of yourself.</string>
+    <string name="broncoID">Enter your Bronco ID</string>
+    <string name="rideText2">Fill in the information about yourself</string>
     <string name="myLocation">Use My Location.</string>
-    <string name="rideHint">i.e. black hair, red shirt, blue pants.</string>
-    <string name="thanks3Msg">You will be notified when your driver arrives at your location.</string>
+    <string name="rideHint">Description of yourself. i.e. black hair, red shirt, blue pants.</string>
+    <string name="thanks3Msg">You will be notified via text message when your driver arrives at your location.</string>
 </resources>

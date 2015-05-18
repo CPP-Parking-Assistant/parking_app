@@ -256,6 +256,7 @@
     <string name="arrive1Button">Arrived!</string>
     <string name="arrive1msg">Press the button below once you arrive at the students location</string>
     <string name="arrive2msg">Press the button below once you arrive at the students parking location</string>
+    <string name="broncoID">Enter your Bronco ID</string>
     <!-- From: file:/C:/Users/Elliot/AndroidStudioProjects/CPPParkingAssistant/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values/common_strings.xml -->
     <eat-comment/>
     <string name="common_android_wear_notification_needs_update_text">An application requires an update to the Android Wear app.</string>
@@ -304,16 +305,16 @@ available. Please contact the developer for assistance.</string>
     <string name="form1Submit">Submit</string>
     <string name="form2Msg">Select a parking spot or student to pick up. Parking spots are in green. Students are in yellow.</string>
     <string name="leave">I Am Leaving\nMy Parking Spot</string>
-    <string name="leaveHint">i.e. Blue Honda Civic, parking structure, section 3C</string>
-    <string name="leaveMsg">Enter a description of your car and its location. </string>
+    <string name="leaveHint">Description of your car and its location. i.e. Blue Honda Civic, parking structure, section 3C</string>
+    <string name="leaveMsg">Fill in the information below</string>
     <string name="leaving">Select the approximate location your car is parked on the map by long pressing on it. Zoom in for better accuracy.</string>
     <string name="maleText">Male</string>
     <string name="myLocation">Use My Location.</string>
     <string name="park">I Need A \nParking Space</string>
     <string name="ride">I Need A Ride\n Back To My Car</string>
-    <string name="rideHint">i.e. black hair, red shirt, blue pants.</string>
+    <string name="rideHint">Description of yourself. i.e. black hair, red shirt, blue pants.</string>
     <string name="rideText">Select the approximate location you will be waiting on the map by long pressing on it. Zoom in for better accuracy.</string>
-    <string name="rideText2">Enter a description of yourself.</string>
+    <string name="rideText2">Fill in the information about yourself</string>
     <string name="selection">\n\nMake a Selection</string>
     <!-- From: file:/C:/Users/Elliot/AndroidStudioProjects/CPPParkingAssistant/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.0.0/res/values/admob_strings.xml -->
     <eat-comment/>
@@ -322,8 +323,8 @@ available. Please contact the developer for assistance.</string>
     <!-- From: file:/C:/Users/Elliot/AndroidStudioProjects/CPPParkingAssistant/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="thanks">Thank You!</string>
-    <string name="thanks2Msg">You will be notified when your driver arrives at your parking location.</string>
-    <string name="thanks3Msg">You will be notified when your driver arrives at your location.</string>
+    <string name="thanks2Msg">You will be notified via text message when your driver arrives at your parking location.</string>
+    <string name="thanks3Msg">You will be notified via text message when your driver arrives at your location.</string>
     <string name="title">Cal Poly Pomona Parking Assistant</string>
     <!-- From: file:/C:/Users/Elliot/AndroidStudioProjects/CPPParkingAssistant/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.0.0/res/values/wallet_strings.xml -->
     <eat-comment/>

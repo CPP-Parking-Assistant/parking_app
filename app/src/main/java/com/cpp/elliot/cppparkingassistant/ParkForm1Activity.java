@@ -7,7 +7,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.Toast;
 
 public class ParkForm1Activity extends Activity {
     Button parkForm1Button;
@@ -38,8 +37,12 @@ public class ParkForm1Activity extends Activity {
                 else
                     pStudent.setGender("Unknown Gender");
                 pStudent.setDescription(parkForm1EditText.getText()+"");
-                Toast.makeText(ParkForm1Activity.this, pStudent.toString(), Toast.LENGTH_LONG).show();
+                pStudent.saveInBackground();
                 Intent intent = new Intent(ParkForm1Activity.this, ParkForm2Activity.class);
+                Bundle b = new Bundle();
+                b.putString("gender", pStudent.getGender());
+                b.putString("description2", pStudent.getDescription());
+                intent.putExtras(b);
                 startActivity(intent);
             }
         });

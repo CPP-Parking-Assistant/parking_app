@@ -11,7 +11,7 @@ import com.google.android.gms.maps.model.LatLng;
 
 public class LeaveActivity2 extends Activity {
     Button leavingButton2;
-    EditText leaveEditText;
+    EditText leaveEditText,broncoEditText2;
     LatLng location;
     double lat,lng;
     LeavingStudent lStudent = new LeavingStudent();
@@ -25,14 +25,19 @@ public class LeaveActivity2 extends Activity {
         lng = b.getDouble("lng");
         location = new LatLng(lat,lng);
         leaveEditText = (EditText) findViewById(R.id.leaveEditText);
+        broncoEditText2 = (EditText) findViewById(R.id.broncoEditText2);
         leavingButton2 = (Button) findViewById(R.id.leavingButton2);
         leavingButton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                lStudent.setDescription(leaveEditText.getText()+"");
+                lStudent.setDescription(leaveEditText.getText() + "");
                 lStudent.setLocation(location);
+                lStudent.setBroncoID(broncoEditText2.getText() + "");
                 lStudent.saveInBackground();
+                Bundle b = new Bundle();
+                b.putString("broncoId", broncoEditText2.getText() + "");
                 Intent intent = new Intent(LeaveActivity2.this, ThanksActivity2.class);
+                intent.putExtras(b);
                 startActivity(intent);
             }
         });
