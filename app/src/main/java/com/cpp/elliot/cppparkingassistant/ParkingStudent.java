@@ -7,6 +7,7 @@ import com.parse.ParseObject;
 public class ParkingStudent extends ParseObject{
     private String description;
     private String gender;
+    private String broncoId;
 
     public ParkingStudent(String description, String gender) {
         this.description = description;
@@ -15,12 +16,13 @@ public class ParkingStudent extends ParseObject{
     public ParkingStudent(){
         this.description = "";
         this.gender = "";
+        this.broncoId = "";
     }
     public String getDescription() {
-        return description;
+        return getString("Description");
     }
     public String getGender() {
-        return gender;
+        return getString("Gender");
     }
     public void setDescription(String description) {
         put("Description",description);
@@ -29,6 +31,13 @@ public class ParkingStudent extends ParseObject{
     public void setGender(String gender) {
         put("Gender",gender);
         this.gender = gender;
+    }
+    public void setBroncoId(String broncoId){
+        put("BroncoId",broncoId);
+        this.broncoId = broncoId;
+    }
+    public String getBroncoId(){
+        return getString("BroncoId");
     }
     @Override
     public String toString(){

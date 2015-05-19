@@ -16,6 +16,7 @@ import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.parse.FindCallback;
 import com.parse.ParseException;
+import com.parse.ParseInstallation;
 import com.parse.ParseQuery;
 
 import java.util.List;
@@ -28,6 +29,7 @@ public class ParkForm2Activity extends Activity {
     private String description2 = "";
     private String gender;
     private String type;
+    private String broncoid;
     private final LatLng CPP = new LatLng(34.0564,-117.8217);
     Button parkForm2Button;
     @Override
@@ -37,6 +39,10 @@ public class ParkForm2Activity extends Activity {
         Bundle b = getIntent().getExtras();
         description2 = b.getString("description2");
         gender = b.getString("gender");
+        broncoid = b.getString("broncoid");
+        ParseInstallation installation = ParseInstallation.getCurrentInstallation();
+        installation.put("Bronco",broncoid);
+        installation.saveInBackground();
         map = ((MapFragment) getFragmentManager().findFragmentById(R.id.parkMap)).getMap();
         CameraUpdate update = CameraUpdateFactory.newLatLngZoom(CPP, 15);
         map.animateCamera(update);
@@ -89,6 +95,7 @@ public class ParkForm2Activity extends Activity {
                 Bundle b2 = new Bundle();
                 b2.putString("type",type);
                 b2.putString("gender", gender);
+                b2.putString("bronco",broncoid);
                 b2.putString("description2", description2);
                 b2.putDouble("latitude", markerLocation.latitude);
                 b2.putDouble("longitude",markerLocation.longitude);

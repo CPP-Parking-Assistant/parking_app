@@ -20,8 +20,6 @@ public class ParkArriveActivity1 extends Activity {
     private String type,description,gender,notification;
     private double latitude, longitude;
     private String broncoid;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -88,5 +86,54 @@ public class ParkArriveActivity1 extends Activity {
             Log.e("Notification", "Notification Failed");
             e.printStackTrace();
         }
+        if(type.equals("ride")) {
+            ParseQuery<RideStudent> query1 = ParseQuery.getQuery("RideStudent");
+            query1.whereExists("Latitude");
+            query1.findInBackground(new FindCallback<RideStudent>() {
+                @Override
+                public void done(List<RideStudent> list, ParseException e) {
+                    if (e == null) {
+                        for (int i = 0; i < list.size(); i++) {
+                            if (list.get(i).getBroncoId().equals(broncoid)) {
+                                list.get(i).deleteInBackground();
+                                list.get(i).saveInBackground();
+                            }
+                        }
+                    }
+                }
+            });
+        }
+        else if(type.equals("leave")) {
+            ParseQuery<LeavingStudent> query2 = ParseQuery.getQuery("LeavingStudent");
+            query2.whereExists("Latitude");
+            query2.findInBackground(new FindCallback<LeavingStudent>() {
+                @Override
+                public void done(List<LeavingStudent> list, ParseException e) {
+                    if (e == null) {
+                        for(int i = 0; i < list.size(); i++){
+                            if(list.get(i).getBroncoId().equals(broncoid)) {
+                                list.get(i).deleteInBackground();
+                                list.get(i).saveInBackground();
+                            }
+                        }
+                    }
+                }
+            });
+        }
+        ParseQuery<ParkingStudent> query3 = ParseQuery.getQuery("ParkingStudent");
+        query3.whereExists("BroncoId");
+        query3.findInBackground(new FindCallback<ParkingStudent>() {
+            @Override
+            public void done(List<ParkingStudent> list, ParseException e) {
+                if (e == null) {
+                    for(int i = 0; i < list.size(); i++){
+                        if(list.get(i).getBroncoId().equals(broncoid)) {
+                            list.get(i).deleteInBackground();
+                            list.get(i).saveInBackground();
+                        }
+                    }
+                }
+            }
+        });
     }
 }

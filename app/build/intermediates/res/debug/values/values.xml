@@ -252,7 +252,7 @@
     <string name="accept">Accept</string>
     <!-- From: file:/C:/Users/Elliot/AndroidStudioProjects/CPPParkingAssistant/app/src/main/res/values/strings.xml -->
     <eat-comment/>
-    <string name="app_name">CPP Parking Assistant</string>
+    <string name="app_name">Parking for CPP</string>
     <string name="arrive1Button">Arrived!</string>
     <string name="arrive1msg">Press the button below once you arrive at the students location</string>
     <string name="arrive2msg">Press the button below once you arrive at the students parking location</string>
@@ -323,8 +323,8 @@ available. Please contact the developer for assistance.</string>
     <!-- From: file:/C:/Users/Elliot/AndroidStudioProjects/CPPParkingAssistant/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="thanks">Thank You!</string>
-    <string name="thanks2Msg">You will be notified via text message when your driver arrives at your parking location.</string>
-    <string name="thanks3Msg">You will be notified via text message when your driver arrives at your location.</string>
+    <string name="thanks2Msg">You will receive a notification when your driver arrives at your parking location.</string>
+    <string name="thanks3Msg">You will receive a notification when your driver arrives at your location.</string>
     <string name="title">Cal Poly Pomona Parking Assistant</string>
     <!-- From: file:/C:/Users/Elliot/AndroidStudioProjects/CPPParkingAssistant/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.0.0/res/values/wallet_strings.xml -->
     <eat-comment/>

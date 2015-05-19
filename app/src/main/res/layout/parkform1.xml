@@ -50,8 +50,18 @@
                 />
         </LinearLayout>
         <EditText
+            android:id="@+id/broncoEditText3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/broncoID"
+            android:background="@drawable/abc_popup_background_mtrl_mult"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:padding="20dp"
+            />
+        <EditText
             android:id="@+id/parkForm1EditText"
-            android:layout_marginTop="30dp"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:hint="@string/form1EditText"
