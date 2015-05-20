@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.google.android.gms.maps.model.LatLng;
+import com.parse.ParseInstallation;
 
 public class LeaveActivity2 extends Activity {
     Button leavingButton2;
@@ -27,6 +28,10 @@ public class LeaveActivity2 extends Activity {
         leaveEditText = (EditText) findViewById(R.id.leaveEditText);
         broncoEditText2 = (EditText) findViewById(R.id.broncoEditText2);
         leavingButton2 = (Button) findViewById(R.id.leavingButton2);
+        ParseInstallation installation = ParseInstallation.getCurrentInstallation();
+        if(installation.get("Bronco") != null){
+            broncoEditText2.setText(installation.getString("Bronco"));
+        }
         leavingButton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

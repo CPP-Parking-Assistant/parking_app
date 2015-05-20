@@ -1,6 +1,8 @@
 package com.cpp.elliot.cppparkingassistant;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -30,6 +32,8 @@ public class ParkForm2Activity extends Activity {
     private String gender;
     private String type;
     private String broncoid;
+    private int i = 0;
+    private int j = 0;
     private final LatLng CPP = new LatLng(34.0564,-117.8217);
     Button parkForm2Button;
     @Override
@@ -41,7 +45,7 @@ public class ParkForm2Activity extends Activity {
         gender = b.getString("gender");
         broncoid = b.getString("broncoid");
         ParseInstallation installation = ParseInstallation.getCurrentInstallation();
-        installation.put("Bronco",broncoid);
+        installation.put("Bronco", broncoid);
         installation.saveInBackground();
         map = ((MapFragment) getFragmentManager().findFragmentById(R.id.parkMap)).getMap();
         CameraUpdate update = CameraUpdateFactory.newLatLngZoom(CPP, 15);
@@ -52,6 +56,9 @@ public class ParkForm2Activity extends Activity {
             @Override
             public void done(List<RideStudent> list, ParseException e) {
                 if (e == null) {
+                    if(list.size() == 0){
+                        i = 1;
+                    }
                     for (int i = 0; i < list.size(); i++) {
                         location = new LatLng(list.get(i).getLatitude(), list.get(i).getLongitude());
                         description = list.get(i).getGender() + ", " + list.get(i).getDescription();
@@ -66,6 +73,8 @@ public class ParkForm2Activity extends Activity {
             @Override
             public void done(List<LeavingStudent> list, ParseException e) {
                 if (e == null) {
+                    if(list.size() == 0 && i == 1)
+                        alert();
                     for (int i = 0; i < list.size(); i++) {
                         location = new LatLng(list.get(i).getLatitude(), list.get(i).getLongitude());
                         description = list.get(i).getDescription();
@@ -79,13 +88,12 @@ public class ParkForm2Activity extends Activity {
             public boolean onMarkerClick(Marker marker) {
                 markerLocation = marker.getPosition();
                 marker.showInfoWindow();
-                if(marker.getTitle().contains("Male") || marker.getTitle().contains("Female") || marker.getTitle().contains("Unknown Gender"))
+                if (marker.getTitle().contains("Male") || marker.getTitle().contains("Female") || marker.getTitle().contains("Unknown Gender"))
                     type = "ride";
                 else
                     type = "leave";
                 return true;
             }
-
         });
         parkForm2Button = (Button) findViewById(R.id.parkForm2Button);
         parkForm2Button.setOnClickListener(new View.OnClickListener() {
@@ -93,15 +101,28 @@ public class ParkForm2Activity extends Activity {
             public void onClick(View v) {
                 Intent intent = new Intent(ParkForm2Activity.this, ParkArriveActivity1.class);
                 Bundle b2 = new Bundle();
-                b2.putString("type",type);
+                b2.putString("type", type);
                 b2.putString("gender", gender);
-                b2.putString("bronco",broncoid);
+                b2.putString("bronco", broncoid);
                 b2.putString("description2", description2);
                 b2.putDouble("latitude", markerLocation.latitude);
-                b2.putDouble("longitude",markerLocation.longitude);
+                b2.putDouble("longitude", markerLocation.longitude);
                 intent.putExtras(b2);
                 startActivity(intent);
             }
         });
+    }
+    public void alert(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(ParkForm2Activity.this);
+        builder.setMessage("Uh Oh! There doesn't seem to be any parking spots or students at this time.");
+        builder.setIcon(R.drawable.nopark);
+        builder.setNegativeButton("Okay", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Intent intent2 = new Intent(ParkForm2Activity.this, ParkingActivity.class);
+                startActivity(intent2);
+            }
+        });
+        builder.show();
     }
 }

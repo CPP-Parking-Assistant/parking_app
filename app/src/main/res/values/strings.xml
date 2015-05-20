@@ -8,13 +8,13 @@
 
     <string name="maleText">Male</string>
     <string name="femaleText">Female</string>
-    <string name="form1Msg">Enter a description about yourself and your car.</string>
-    <string name="form1EditText">i.e. brown hair and red t-shirt in black Toyota Camry.</string>
+    <string name="form1Msg">Enter your Bronco ID and a description about yourself and your car</string>
+    <string name="form1EditText">Description about yourself and your car i.e. brown hair and red t-shirt in black Toyota Camry.</string>
     <string name="form1Submit">Submit</string>
 
     <string name="form2Msg">Select a parking spot or student to pick up. Parking spots are in green. Students are in yellow.</string>
 
-    <string name="arrive1msg">Press the button below once you arrive at the students location</string>
+    <string name="arrive1msg">Press the button below once you arrive at the location</string>
     <string name="arrive1Button">Arrived!</string>
     <string name="arrive2msg">Press the button below once you arrive at the students parking location</string>
 

@@ -9,6 +9,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 
 import com.google.android.gms.maps.model.LatLng;
+import com.parse.ParseInstallation;
 
 public class RideActivity2 extends Activity {
     Button rideButton2;
@@ -18,8 +19,6 @@ public class RideActivity2 extends Activity {
     boolean genderChosen = false;
     double lat,lng;
     LatLng location;
-    String id;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,7 +32,10 @@ public class RideActivity2 extends Activity {
         rideButton2 = (Button) findViewById(R.id.rideButton2);
         maleCheck = (CheckBox) findViewById(R.id.rideMaleCheck);
         femaleCheck = (CheckBox) findViewById(R.id.rideFemaleCheck);
-
+        ParseInstallation installation = ParseInstallation.getCurrentInstallation();
+        if(installation.get("Bronco") != null){
+            broncoEditText.setText(installation.getString("Bronco"));
+        }
         rideButton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
