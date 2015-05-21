@@ -16,8 +16,10 @@ public class ThanksActivity3 extends Activity{
         setContentView(R.layout.ridethankyou);
         Bundle b = getIntent().getExtras();
         String broncoId = b.getString("broncoId");
+        String description = b.getString("description");
         ParseInstallation installation = ParseInstallation.getCurrentInstallation();
         installation.put("Bronco", broncoId);
+        installation.put("description",description);
         installation.saveInBackground();
         try {
             ParsePush.subscribeInBackground(broncoId, new SaveCallback() {

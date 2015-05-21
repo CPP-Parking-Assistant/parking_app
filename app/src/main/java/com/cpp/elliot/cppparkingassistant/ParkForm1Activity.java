@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 
+import com.google.android.gms.maps.model.LatLng;
 import com.parse.ParseInstallation;
 
 public class ParkForm1Activity extends Activity {
@@ -16,13 +17,18 @@ public class ParkForm1Activity extends Activity {
     EditText parkForm1EditText;
     EditText broncoEditText3;
     String gender = "";
+    String type = "";
     ParkingStudent pStudent = new ParkingStudent();
+    LatLng location;
     boolean genderChosen = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.parkform1);
+        Bundle b = getIntent().getExtras();
+        type = b.getString("type");
+        location = new LatLng(b.getDouble("latitude"),b.getDouble("longitude"));
         broncoEditText3 = (EditText) findViewById(R.id.broncoEditText3);
         parkForm1EditText = (EditText) findViewById(R.id.parkForm1EditText);
         parkForm1Button = (Button) findViewById(R.id.parkForm1Button);
@@ -48,11 +54,19 @@ public class ParkForm1Activity extends Activity {
                 pStudent.setBroncoId(broncoEditText3.getText() + "");
                 pStudent.setDescription(parkForm1EditText.getText() + "");
                 pStudent.saveInBackground();
-                Intent intent = new Intent(ParkForm1Activity.this, ParkForm2Activity.class);
+                ParseInstallation installation = ParseInstallation.getCurrentInstallation();
+                if(installation.get("Bronco") == null) {
+                    installation.put("Bronco", broncoEditText3.getText() + "");
+                    installation.put("description", parkForm1EditText.getText() + "");
+                    installation.saveInBackground();
+                }
+                Intent intent = new Intent(ParkForm1Activity.this, ParkArriveActivity1.class);
                 Bundle b = new Bundle();
+                b.putString("type",type);
                 b.putString("gender", gender);
                 b.putString("description2", parkForm1EditText.getText() + "");
-                b.putString("broncoid", broncoEditText3.getText() + "");
+                b.putDouble("latitude",location.latitude);
+                b.putDouble("longitude",location.longitude);
                 intent.putExtras(b);
                 startActivity(intent);
             }

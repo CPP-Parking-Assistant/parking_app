@@ -17,11 +17,10 @@ public class ParkingActivity extends Activity {
         rideButton = (Button) findViewById(R.id.rideButton);
         leaveButton = (Button) findViewById(R.id.leaveButton);
         parkForm1Button = (Button) findViewById(R.id.parkForm1Button);
-
         parkButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ParkingActivity.this, ParkForm1Activity.class);
+                Intent intent = new Intent(ParkingActivity.this, ParkForm2Activity.class);
                 startActivity(intent);
             }
         });

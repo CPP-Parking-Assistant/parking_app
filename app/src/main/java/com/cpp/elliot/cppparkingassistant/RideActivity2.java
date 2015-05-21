@@ -11,6 +11,9 @@ import android.widget.EditText;
 import com.google.android.gms.maps.model.LatLng;
 import com.parse.ParseInstallation;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
 public class RideActivity2 extends Activity {
     Button rideButton2;
     CheckBox maleCheck,femaleCheck;
@@ -49,12 +52,18 @@ public class RideActivity2 extends Activity {
                 }
                 else
                     rStudent.setGender("Unknown Gender");
+                Calendar c = Calendar.getInstance();
+                SimpleDateFormat sdf = new SimpleDateFormat("MM-dd-yy");
+                SimpleDateFormat sdf2 = new SimpleDateFormat("HH:mm");
+                rStudent.setDateAdded(sdf.format(c.getTime()));
+                rStudent.setTimeAdded(sdf2.format(c.getTime()));
                 rStudent.setDescription(rideEditText.getText() + "");
                 rStudent.setLocation(location);
                 rStudent.setBroncoID(broncoEditText.getText() + "");
                 rStudent.saveInBackground();
                 Bundle b = new Bundle();
                 b.putString("broncoId", broncoEditText.getText() + "");
+                b.putString("description",rideEditText.getText() + "");
                 Intent intent = new Intent(RideActivity2.this, ThanksActivity3.class);
                 intent.putExtras(b);
                 startActivity(intent);

@@ -10,13 +10,15 @@ import android.widget.EditText;
 import com.google.android.gms.maps.model.LatLng;
 import com.parse.ParseInstallation;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
 public class LeaveActivity2 extends Activity {
     Button leavingButton2;
     EditText leaveEditText,broncoEditText2;
     LatLng location;
     double lat,lng;
     LeavingStudent lStudent = new LeavingStudent();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,12 +37,18 @@ public class LeaveActivity2 extends Activity {
         leavingButton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Calendar c = Calendar.getInstance();
+                SimpleDateFormat sdf = new SimpleDateFormat("MM-dd-yy");
+                SimpleDateFormat sdf2 = new SimpleDateFormat("HH:mm");
+                lStudent.setDateAdded(sdf.format(c.getTime()));
+                lStudent.setTimeAdded(sdf2.format(c.getTime()));
                 lStudent.setDescription(leaveEditText.getText() + "");
                 lStudent.setLocation(location);
                 lStudent.setBroncoID(broncoEditText2.getText() + "");
                 lStudent.saveInBackground();
                 Bundle b = new Bundle();
                 b.putString("broncoId", broncoEditText2.getText() + "");
+                b.putString("description",leaveEditText.getText() + "");
                 Intent intent = new Intent(LeaveActivity2.this, ThanksActivity2.class);
                 intent.putExtras(b);
                 startActivity(intent);

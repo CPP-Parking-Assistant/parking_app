@@ -16,8 +16,10 @@ public class ThanksActivity2 extends Activity {
         setContentView(R.layout.leavethankyou);
         Bundle b = getIntent().getExtras();
         String broncoId = b.getString("broncoId");
+        String description = b.getString("description");
         ParseInstallation installation = ParseInstallation.getCurrentInstallation();
         installation.put("Bronco", broncoId);
+        installation.put("description", description);
         installation.saveInBackground();
         try {
             ParsePush.subscribeInBackground(broncoId, new SaveCallback() {
@@ -31,7 +33,7 @@ public class ThanksActivity2 extends Activity {
             });
         }
         catch (Exception e){
-            Log.e("channel error","couldnt subscribe to channel using broncoID");
+            Log.e("channel error","couldn't subscribe to channel using broncoID");
         }
     }
 }

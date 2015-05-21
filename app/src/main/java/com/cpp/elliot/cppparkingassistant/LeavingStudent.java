@@ -9,6 +9,8 @@ public class LeavingStudent extends ParseObject{
     private String description;
     private LatLng location;
     private String broncoId;
+    private String date;
+    private String time;
 
     public LeavingStudent(String car, LatLng location) {
         this.description = car;
@@ -36,6 +38,20 @@ public class LeavingStudent extends ParseObject{
     public void setBroncoID(String broncoID){
         put("BroncoId",broncoID);
         this.broncoId = broncoID;
+    }
+    public void setDateAdded(String date){
+        put("DateAdded",date);
+        this.date = date;
+    }
+    public String getDateAdded(){
+        return getString("DateAdded");
+    }
+    public void setTimeAdded(String time){
+        put("TimeAdded",time);
+        this.time = time;
+    }
+    public String getTimeAdded(){
+        return getString("TimeAdded");
     }
     public String getBroncoId(){
         return getString("BroncoId");
