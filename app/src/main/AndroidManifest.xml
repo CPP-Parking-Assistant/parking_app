@@ -47,7 +47,6 @@
         <activity android:name=".ParkForm1Activity"/>
         <activity android:name=".ParkForm2Activity"/>
         <activity android:name=".ParkArriveActivity1"/>
-        <activity android:name=".ParkArriveActivity2"/>
         <activity android:name=".ThanksActivity1"/>
         <activity android:name=".LeaveActivity"/>
         <activity android:name=".LeaveActivity2"/>
