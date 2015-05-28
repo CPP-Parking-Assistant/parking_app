@@ -1,10 +1,13 @@
 package com.cpp.elliot.cppparkingassistant;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -21,11 +24,9 @@ import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseQuery;
 
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.List;
 
-public class ParkForm2Activity extends Activity {
+public class ParkForm2Activity extends ActionBarActivity {
     private GoogleMap map;
     private LatLng location;
     private LatLng markerLocation;
@@ -36,7 +37,6 @@ public class ParkForm2Activity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.parkform2);
-        deleteOvertime();
         map = ((MapFragment) getFragmentManager().findFragmentById(R.id.parkMap)).getMap();
         CameraUpdate update = CameraUpdateFactory.newLatLngZoom(CPP, 15);
         map.animateCamera(update);
@@ -69,7 +69,6 @@ public class ParkForm2Activity extends Activity {
             }
         });
         checkEmptyMap();
-        //Toast.makeText(ParkForm2Activity.this,b+"", Toast.LENGTH_SHORT).show();
         map.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
             @Override
             public boolean onMarkerClick(Marker marker) {
@@ -96,44 +95,6 @@ public class ParkForm2Activity extends Activity {
                     startActivity(intent);
                 } catch (Exception e) {
                     Toast.makeText(ParkForm2Activity.this, "Please select a student or a parking spot", Toast.LENGTH_LONG).show();
-                }
-            }
-        });
-    }
-    public void deleteOvertime(){
-        ParseQuery<RideStudent> query1 = ParseQuery.getQuery("RideStudent");
-        query1.whereExists("Latitude");
-        query1.findInBackground(new FindCallback<RideStudent>() {
-            @Override
-            public void done(List<RideStudent> list, ParseException e) {
-                if (e == null) {
-                    for (int i = 0; i < list.size(); i++) {
-                        if (!checkDate(list.get(i).getDateAdded())) {
-                            list.get(i).deleteInBackground();
-                            list.get(i).saveInBackground();
-                        } else if (!checkTime(list.get(i).getTimeAdded())) {
-                            list.get(i).deleteInBackground();
-                            list.get(i).saveInBackground();
-                        }
-                    }
-                }
-            }
-        });
-        ParseQuery<LeavingStudent> query2 = ParseQuery.getQuery("LeavingStudent");
-        query2.whereExists("Latitude");
-        query2.findInBackground(new FindCallback<LeavingStudent>() {
-            @Override
-            public void done(List<LeavingStudent> list, ParseException e) {
-                if (e == null) {
-                    for (int i = 0; i < list.size(); i++) {
-                        if (!checkDate(list.get(i).getDateAdded())) {
-                            list.get(i).deleteInBackground();
-                            list.get(i).saveInBackground();
-                        } else if (!checkTime(list.get(i).getTimeAdded())) {
-                            list.get(i).deleteInBackground();
-                            list.get(i).saveInBackground();
-                        }
-                    }
                 }
             }
         });
@@ -176,109 +137,41 @@ public class ParkForm2Activity extends Activity {
         });
         builder.show();
     }
-    public boolean checkDate(String date){
-        int month = getMonth(date);
-        int day = getDay(date);
-        int year = getYear(date);
-        boolean bool = false;
-        if(year == getCurrentYear()){
-            if(month == getCurrentMonth()){
-                if(day == getCurrentDay()){
-                    bool = true;
-                }
-            }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.parking_activity_actions, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_settings:
+                openSettings();
+                return true;
+            case R.id.action_home:
+                goHome();
+                return true;
+            case R.id.action_exit:
+                exit();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
         }
-        return bool;
     }
-    public boolean checkTime(String time){
-        int hour = getHour(time);
-        int minute = getMinute(time);
-        boolean bool = false;
-        if(hour == getCurrentHour()){
-            if(getCurrentMinute()-minute <= 20){
-                bool = true;
-            }
-        }
-        else if(getCurrentHour() == hour+1){
-            if(getCurrentMinute()-minute+60 <= 20){
-                bool = true;
-            }
-        }
-        return bool;
+    public void openSettings(){
+        Intent intent = new Intent(ParkForm2Activity.this,Settings.class);
+        startActivity(intent);
     }
-    public int getMonth(String date){
-        String str = "";
-        for(int i = 0; i < date.length(); i++){
-            if(date.charAt(i) == '-')
-                break;
-            else
-                str += date.charAt(i);
-        }
-        return Integer.parseInt(str);
+    public void goHome(){
+        Intent intent = new Intent(ParkForm2Activity.this,ParkingActivity.class);
+        startActivity(intent);
     }
-    public int getDay(String date){
-        String str = "";
-        int index = date.indexOf('-')+1;
-        for(int i = index; i < date.length(); i++){
-            if(date.charAt(i) == '-')
-                break;
-            else
-                str += date.charAt(i);
-        }
-        return Integer.parseInt(str);
-    }
-    public int getYear(String date){
-        String str = "";
-        int index = date.lastIndexOf('-')+1;
-        for(int i = index; i < date.length(); i++){
-            str += date.charAt(i);
-        }
-        return Integer.parseInt(str);
-    }
-    public int getHour(String date){
-        String str = "";
-        int index = date.indexOf(':');
-        for(int i = 0; i < index; i++){
-            str += date.charAt(i);
-        }
-        return Integer.parseInt(str);
-    }
-    public int getMinute(String date){
-        String str = "";
-        int index = date.indexOf(':')+1;
-        for(int i = index; i < date.length(); i++){
-            str += date.charAt(i);
-        }
-        return Integer.parseInt(str);
-    }
-    public int getCurrentMonth(){
-        Calendar c = Calendar.getInstance();
-        SimpleDateFormat sdf = new SimpleDateFormat("MM-dd-yy");
-        String date = sdf.format(c.getTime());
-        return getMonth(date);
-    }
-    public int getCurrentDay(){
-        Calendar c = Calendar.getInstance();
-        SimpleDateFormat sdf = new SimpleDateFormat("MM-dd-yy");
-        String date = sdf.format(c.getTime());
-        return getDay(date);
-    }
-    public int getCurrentYear(){
-        Calendar c = Calendar.getInstance();
-        SimpleDateFormat sdf = new SimpleDateFormat("MM-dd-yy");
-        String date = sdf.format(c.getTime());
-        return getYear(date);
-    }
-    public int getCurrentHour(){
-        Calendar c = Calendar.getInstance();
-        SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
-        String date = sdf.format(c.getTime());
-        return getHour(date);
-    }
-    public int getCurrentMinute(){
-        Calendar c = Calendar.getInstance();
-        SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
-        String date = sdf.format(c.getTime());
-        return getMinute(date);
+    public void exit(){
+        this.finish();
+        Intent intent = new Intent(Intent.ACTION_MAIN);
+        intent.addCategory(Intent.CATEGORY_HOME);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
     }
 }

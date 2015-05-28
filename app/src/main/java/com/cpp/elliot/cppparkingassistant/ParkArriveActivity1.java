@@ -1,9 +1,12 @@
 package com.cpp.elliot.cppparkingassistant;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
@@ -15,7 +18,7 @@ import com.parse.ParseQuery;
 
 import java.util.List;
 
-public class ParkArriveActivity1 extends Activity {
+public class ParkArriveActivity1 extends ActionBarActivity {
     Button parkArrive1Button;
     private String type,description,gender,notification;
     private double latitude, longitude;
@@ -126,8 +129,8 @@ public class ParkArriveActivity1 extends Activity {
             @Override
             public void done(List<ParkingStudent> list, ParseException e) {
                 if (e == null) {
-                    for(int i = 0; i < list.size(); i++){
-                        if(list.get(i).getBroncoId().equals(broncoid)) {
+                    for (int i = 0; i < list.size(); i++) {
+                        if (list.get(i).getBroncoId().equals(broncoid)) {
                             list.get(i).deleteInBackground();
                             list.get(i).saveInBackground();
                         }
@@ -135,5 +138,42 @@ public class ParkArriveActivity1 extends Activity {
                 }
             }
         });
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.parking_activity_actions, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_settings:
+                openSettings();
+                return true;
+            case R.id.action_home:
+                goHome();
+                return true;
+            case R.id.action_exit:
+                exit();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+    public void openSettings(){
+        Intent intent = new Intent(ParkArriveActivity1.this,Settings.class);
+        startActivity(intent);
+    }
+    public void goHome(){
+        Intent intent = new Intent(ParkArriveActivity1.this,ParkingActivity.class);
+        startActivity(intent);
+    }
+    public void exit(){
+        this.finish();
+        Intent intent = new Intent(Intent.ACTION_MAIN);
+        intent.addCategory(Intent.CATEGORY_HOME);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
     }
 }

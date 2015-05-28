@@ -64,7 +64,6 @@
         <activity android:name="com.cpp.elliot.cppparkingassistant.ParkForm1Activity" />
         <activity android:name="com.cpp.elliot.cppparkingassistant.ParkForm2Activity" />
         <activity android:name="com.cpp.elliot.cppparkingassistant.ParkArriveActivity1" />
-        <activity android:name="com.cpp.elliot.cppparkingassistant.ParkArriveActivity2" />
         <activity android:name="com.cpp.elliot.cppparkingassistant.ThanksActivity1" />
         <activity android:name="com.cpp.elliot.cppparkingassistant.LeaveActivity" />
         <activity android:name="com.cpp.elliot.cppparkingassistant.LeaveActivity2" />
@@ -72,6 +71,7 @@
         <activity android:name="com.cpp.elliot.cppparkingassistant.RideActivity1" />
         <activity android:name="com.cpp.elliot.cppparkingassistant.RideActivity2" />
         <activity android:name="com.cpp.elliot.cppparkingassistant.ThanksActivity3" />
+        <activity android:name="com.cpp.elliot.cppparkingassistant.Settings" />
 
         <service android:name="com.parse.PushService" />
 
@@ -100,6 +100,12 @@
                 <action android:name="com.parse.push.intent.OPEN" />
             </intent-filter>
         </receiver>
+
+        <service
+            android:name="com.cpp.elliot.cppparkingassistant.DeleteService"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
     </application>
 
 </manifest>

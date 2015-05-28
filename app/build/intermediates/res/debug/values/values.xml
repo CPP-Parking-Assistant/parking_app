@@ -255,7 +255,6 @@
     <string name="app_name">Parking for CPP</string>
     <string name="arrive1Button">Arrived!</string>
     <string name="arrive1msg">Press the button below once you arrive at the location</string>
-    <string name="arrive2msg">Press the button below once you arrive at the students parking location</string>
     <string name="broncoID">Enter your Bronco ID</string>
     <!-- From: file:/C:/Users/Elliot/AndroidStudioProjects/CPPParkingAssistant/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values/common_strings.xml -->
     <eat-comment/>
@@ -298,15 +297,16 @@ available. Please contact the developer for assistance.</string>
     <string name="decline">Decline</string>
     <!-- From: file:/C:/Users/Elliot/AndroidStudioProjects/CPPParkingAssistant/app/src/main/res/values/strings.xml -->
     <eat-comment/>
-    <string name="exit">Exit App</string>
+    <string name="exit">Exit</string>
     <string name="femaleText">Female</string>
     <string name="form1EditText">Description about yourself and your car i.e. brown hair and red t-shirt in black Toyota Camry.</string>
     <string name="form1Msg">Enter your Bronco ID and a description about yourself and your car</string>
     <string name="form1Submit">Submit</string>
     <string name="form2Msg">Select a parking spot or student to pick up. Parking spots are in green. Students are in yellow.</string>
+    <string name="goHome">Main Menu</string>
     <string name="leave">I Am Leaving\nMy Parking Spot</string>
     <string name="leaveHint">Description of your car and its location. i.e. Blue Honda Civic, parking structure, section 3C</string>
-    <string name="leaveMsg">Fill in the information below</string>
+    <string name="leaveMsg">Enter your Bronco ID and a description of your car and its location</string>
     <string name="leaving">Select the approximate location your car is parked on the map by long pressing on it. Zoom in for better accuracy.</string>
     <string name="maleText">Male</string>
     <string name="myLocation">Use My Location.</string>
@@ -314,8 +314,9 @@ available. Please contact the developer for assistance.</string>
     <string name="ride">I Need A Ride\n Back To My Car</string>
     <string name="rideHint">Description of yourself. i.e. black hair, red shirt, blue pants.</string>
     <string name="rideText">Select the approximate location you will be waiting on the map by long pressing on it. Zoom in for better accuracy.</string>
-    <string name="rideText2">Fill in the information about yourself</string>
+    <string name="rideText2">Enter your Bronco ID and a description of yourself</string>
     <string name="selection">\n\nMake a Selection</string>
+    <string name="settings">Settings</string>
     <!-- From: file:/C:/Users/Elliot/AndroidStudioProjects/CPPParkingAssistant/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.0.0/res/values/admob_strings.xml -->
     <eat-comment/>
     <string name="store_picture_message">"Allow Ad to store image in Picture gallery?"</string>
@@ -325,7 +326,7 @@ available. Please contact the developer for assistance.</string>
     <string name="thanks">Thank You!</string>
     <string name="thanks2Msg">You will receive a notification when your driver arrives at your parking location.</string>
     <string name="thanks3Msg">You will receive a notification when your driver arrives at your location.</string>
-    <string name="title">Cal Poly Pomona Parking Assistant</string>
+    <string name="title">Parking For \nCal Poly Pomona</string>
     <!-- From: file:/C:/Users/Elliot/AndroidStudioProjects/CPPParkingAssistant/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.0.0/res/values/wallet_strings.xml -->
     <eat-comment/>
     <string name="wallet_buy_button_place_holder" translation_description="Text on a button that allows a user to make a payment with Google Wallet [CHAR LIMIT=30]">Buy with Google</string>

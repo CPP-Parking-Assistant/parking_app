@@ -1,8 +1,11 @@
 package com.cpp.elliot.cppparkingassistant;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -11,7 +14,7 @@ import android.widget.EditText;
 import com.google.android.gms.maps.model.LatLng;
 import com.parse.ParseInstallation;
 
-public class ParkForm1Activity extends Activity {
+public class ParkForm1Activity extends ActionBarActivity {
     Button parkForm1Button;
     CheckBox maleCheck,femaleCheck;
     EditText parkForm1EditText;
@@ -20,7 +23,6 @@ public class ParkForm1Activity extends Activity {
     String type = "";
     ParkingStudent pStudent = new ParkingStudent();
     LatLng location;
-    boolean genderChosen = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,20 +36,30 @@ public class ParkForm1Activity extends Activity {
         parkForm1Button = (Button) findViewById(R.id.parkForm1Button);
         maleCheck = (CheckBox) findViewById(R.id.maleCheck);
         femaleCheck = (CheckBox) findViewById(R.id.femaleCheck);
-        ParseInstallation installation = ParseInstallation.getCurrentInstallation();
+        final ParseInstallation installation = ParseInstallation.getCurrentInstallation();
         if(installation.get("Bronco") != null){
             broncoEditText3.setText(installation.getString("Bronco"));
+        }
+        if(installation.get("Gender") != null){
+            if(installation.getString("Gender").equals("Male")){
+                maleCheck.setChecked(true);
+            }
+            else if(installation.getString("Gender").equals("Female")){
+                femaleCheck.setChecked(true);
+            }
         }
         parkForm1Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (maleCheck.isChecked() && !femaleCheck.isChecked()) {
+                    if(installation.get("Gender") == null)
+                        installation.put("Gender", "Male");
                     pStudent.setGender("Male");
-                    genderChosen = true;
                     gender = "Male";
                 } else if (!maleCheck.isChecked() && femaleCheck.isChecked()) {
+                    if(installation.get("Gender") == null)
+                        installation.put("Gender", "Male");
                     pStudent.setGender("Female");
-                    genderChosen = true;
                     gender = "Female";
                 } else
                     pStudent.setGender("Unknown Gender");
@@ -71,5 +83,42 @@ public class ParkForm1Activity extends Activity {
                 startActivity(intent);
             }
         });
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.parking_activity_actions, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_settings:
+                openSettings();
+                return true;
+            case R.id.action_home:
+                goHome();
+                return true;
+            case R.id.action_exit:
+                exit();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+    public void openSettings(){
+        Intent intent = new Intent(ParkForm1Activity.this,Settings.class);
+        startActivity(intent);
+    }
+    public void goHome(){
+        Intent intent = new Intent(ParkForm1Activity.this,ParkingActivity.class);
+        startActivity(intent);
+    }
+    public void exit(){
+        this.finish();
+        Intent intent = new Intent(Intent.ACTION_MAIN);
+        intent.addCategory(Intent.CATEGORY_HOME);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
     }
 }

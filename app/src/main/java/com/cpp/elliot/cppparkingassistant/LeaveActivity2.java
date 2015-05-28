@@ -1,8 +1,11 @@
 package com.cpp.elliot.cppparkingassistant;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,7 +16,7 @@ import com.parse.ParseInstallation;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
-public class LeaveActivity2 extends Activity {
+public class LeaveActivity2 extends ActionBarActivity {
     Button leavingButton2;
     EditText leaveEditText,broncoEditText2;
     LatLng location;
@@ -54,5 +57,42 @@ public class LeaveActivity2 extends Activity {
                 startActivity(intent);
             }
         });
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.parking_activity_actions, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_settings:
+                openSettings();
+                return true;
+            case R.id.action_home:
+                goHome();
+                return true;
+            case R.id.action_exit:
+                exit();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+    public void openSettings(){
+        Intent intent = new Intent(LeaveActivity2.this,Settings.class);
+        startActivity(intent);
+    }
+    public void goHome(){
+        Intent intent = new Intent(LeaveActivity2.this,ParkingActivity.class);
+        startActivity(intent);
+    }
+    public void exit(){
+        this.finish();
+        Intent intent = new Intent(Intent.ACTION_MAIN);
+        intent.addCategory(Intent.CATEGORY_HOME);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
     }
 }
