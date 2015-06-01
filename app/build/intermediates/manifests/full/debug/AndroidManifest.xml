@@ -41,7 +41,7 @@
         android:allowBackup="true"
         android:icon="@drawable/bronco_icon"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/MyTheme" >
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
@@ -54,24 +54,47 @@
 
         <activity
             android:name="com.cpp.elliot.cppparkingassistant.ParkingActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.cpp.elliot.cppparkingassistant.ParkForm1Activity" />
-        <activity android:name="com.cpp.elliot.cppparkingassistant.ParkForm2Activity" />
-        <activity android:name="com.cpp.elliot.cppparkingassistant.ParkArriveActivity1" />
-        <activity android:name="com.cpp.elliot.cppparkingassistant.ThanksActivity1" />
-        <activity android:name="com.cpp.elliot.cppparkingassistant.LeaveActivity" />
-        <activity android:name="com.cpp.elliot.cppparkingassistant.LeaveActivity2" />
-        <activity android:name="com.cpp.elliot.cppparkingassistant.ThanksActivity2" />
-        <activity android:name="com.cpp.elliot.cppparkingassistant.RideActivity1" />
-        <activity android:name="com.cpp.elliot.cppparkingassistant.RideActivity2" />
-        <activity android:name="com.cpp.elliot.cppparkingassistant.ThanksActivity3" />
-        <activity android:name="com.cpp.elliot.cppparkingassistant.Settings" />
+        <activity
+            android:name="com.cpp.elliot.cppparkingassistant.ParkForm1Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cpp.elliot.cppparkingassistant.ParkForm2Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cpp.elliot.cppparkingassistant.ParkArriveActivity1"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cpp.elliot.cppparkingassistant.ThanksActivity1"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cpp.elliot.cppparkingassistant.LeaveActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cpp.elliot.cppparkingassistant.LeaveActivity2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cpp.elliot.cppparkingassistant.ThanksActivity2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cpp.elliot.cppparkingassistant.RideActivity1"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cpp.elliot.cppparkingassistant.RideActivity2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cpp.elliot.cppparkingassistant.ThanksActivity3"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cpp.elliot.cppparkingassistant.Settings"
+            android:screenOrientation="portrait" />
 
         <service android:name="com.parse.PushService" />
 

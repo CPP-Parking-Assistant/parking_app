@@ -11,6 +11,11 @@
     <item name="darkorange" type="color">#FFFF8800</item>
     <item name="darkred" type="color">#FFCC0000</item>
     <item name="gold" type="color">#FFD700</item>
+    <item name="black" type="color">#000000</item>
+    <item name="white" type="color">#FFFFFF</item>
+    <item name="gray" type="color">#C0C0C0</item>
+    <item name="darkgray" type="color">#565858</item>
+    <item name="skyblue" type="color">#246BB2</item>
     <integer-array name="androidcolors">
         <item>@color/blue</item>
         <item>@color/purple</item>
@@ -23,5 +28,10 @@
         <item>@color/darkorange</item>
         <item>@color/darkred</item>
         <item>@color/gold</item>
+        <item>@color/black</item>
+        <item>@color/white</item>
+        <item>@color/gray</item>
+        <item>@color/darkgray</item>
+        <item>@color/skyblue</item>
     </integer-array>
 </resources>

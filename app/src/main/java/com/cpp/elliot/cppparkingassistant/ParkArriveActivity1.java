@@ -2,6 +2,7 @@ package com.cpp.elliot.cppparkingassistant;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.Menu;
@@ -17,6 +18,8 @@ import com.parse.ParsePush;
 import com.parse.ParseQuery;
 
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class ParkArriveActivity1 extends ActionBarActivity {
     Button parkArrive1Button;
@@ -27,6 +30,7 @@ public class ParkArriveActivity1 extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.parkarrive1);
+        setTitle("");
         Bundle b = getIntent().getExtras();
         type = b.getString("type");
         gender = b.getString("gender");
@@ -69,6 +73,20 @@ public class ParkArriveActivity1 extends ActionBarActivity {
         parkArrive1Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                parkArrive1Button.setTextColor(getResources().getColor(R.color.darkgreen));
+                parkArrive1Button.setBackgroundColor(getResources().getColor(R.color.gold));
+                final Handler handler = new Handler();
+                Timer t = new Timer();
+                t.schedule(new TimerTask() {
+                    public void run() {
+                        handler.post(new Runnable() {
+                            public void run() {
+                                parkArrive1Button.setTextColor(getResources().getColor(R.color.gold));
+                                parkArrive1Button.setBackgroundColor(getResources().getColor(R.color.darkgreen));
+                            }
+                        });
+                    }
+                }, 500);
                 sendNotification();
                 Intent intent = new Intent(ParkArriveActivity1.this, ThanksActivity1.class);
                 startActivity(intent);

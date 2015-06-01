@@ -2,6 +2,7 @@ package com.cpp.elliot.cppparkingassistant;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -16,6 +17,8 @@ import com.parse.ParseInstallation;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class RideActivity2 extends ActionBarActivity {
     Button rideButton2;
@@ -28,6 +31,7 @@ public class RideActivity2 extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.rideform2);
+        setTitle("");
         Bundle b = getIntent().getExtras();
         lat = b.getDouble("lat");
         lng = b.getDouble("lng");
@@ -52,6 +56,20 @@ public class RideActivity2 extends ActionBarActivity {
         rideButton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                rideButton2.setTextColor(getResources().getColor(R.color.darkgreen));
+                rideButton2.setBackgroundColor(getResources().getColor(R.color.gold));
+                final Handler handler = new Handler();
+                Timer t = new Timer();
+                t.schedule(new TimerTask() {
+                    public void run() {
+                        handler.post(new Runnable() {
+                            public void run() {
+                                rideButton2.setTextColor(getResources().getColor(R.color.gold));
+                                rideButton2.setBackgroundColor(getResources().getColor(R.color.darkgreen));
+                            }
+                        });
+                    }
+                }, 500);
                 if (maleCheck.isChecked() && !femaleCheck.isChecked()) {
                     if(installation.get("Gender") == null)
                         installation.put("Gender", "Male");
@@ -75,7 +93,7 @@ public class RideActivity2 extends ActionBarActivity {
                 rStudent.saveInBackground();
                 Bundle b = new Bundle();
                 b.putString("broncoId", broncoEditText.getText() + "");
-                b.putString("description",rideEditText.getText() + "");
+                b.putString("description", rideEditText.getText() + "");
                 Intent intent = new Intent(RideActivity2.this, ThanksActivity3.class);
                 intent.putExtras(b);
                 startActivity(intent);

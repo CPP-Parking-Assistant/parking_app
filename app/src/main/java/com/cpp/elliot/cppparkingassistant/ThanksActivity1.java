@@ -12,6 +12,7 @@ public class ThanksActivity1 extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.parkthankyou);
+        setTitle("");
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

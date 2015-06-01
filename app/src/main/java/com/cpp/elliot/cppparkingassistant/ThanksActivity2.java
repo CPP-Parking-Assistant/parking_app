@@ -18,6 +18,7 @@ public class ThanksActivity2 extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.leavethankyou);
+        setTitle("");
         Bundle b = getIntent().getExtras();
         String broncoId = b.getString("broncoId");
         String description = b.getString("description");

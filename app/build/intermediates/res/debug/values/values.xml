@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+<resources xmlns:ns1="http://schemas.android.com/apk/res/android">
     <!-- From: file:/C:/Users/Elliot/AndroidStudioProjects/CPPParkingAssistant/app/src/main/res/values/colors.xml -->
     <eat-comment/>
     <integer-array name="androidcolors">
@@ -14,6 +14,11 @@
         <item>@color/darkorange</item>
         <item>@color/darkred</item>
         <item>@color/gold</item>
+        <item>@color/black</item>
+        <item>@color/white</item>
+        <item>@color/gray</item>
+        <item>@color/darkgray</item>
+        <item>@color/skyblue</item>
     </integer-array>
     <!-- From: file:/C:/Users/Elliot/AndroidStudioProjects/CPPParkingAssistant/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/values/values.xml -->
     <eat-comment/>
@@ -39,6 +44,7 @@
     <color name="background_material_light">#ffeeeeee</color>
     <!-- From: file:/C:/Users/Elliot/AndroidStudioProjects/CPPParkingAssistant/app/src/main/res/values/colors.xml -->
     <eat-comment/>
+    <item name="black" type="color">#000000</item>
     <item name="blue" type="color">#FF33B5E5</item>
     <!-- From: file:/C:/Users/Elliot/AndroidStudioProjects/CPPParkingAssistant/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/values/values.xml -->
     <eat-comment/>
@@ -65,6 +71,7 @@
     <!-- From: file:/C:/Users/Elliot/AndroidStudioProjects/CPPParkingAssistant/app/src/main/res/values/colors.xml -->
     <eat-comment/>
     <item name="darkblue" type="color">#FF0099CC</item>
+    <item name="darkgray" type="color">#565858</item>
     <item name="darkgreen" type="color">#FF669900</item>
     <item name="darkorange" type="color">#FFFF8800</item>
     <item name="darkpurple" type="color">#FF9933CC</item>
@@ -78,6 +85,7 @@
     <!-- From: file:/C:/Users/Elliot/AndroidStudioProjects/CPPParkingAssistant/app/src/main/res/values/colors.xml -->
     <eat-comment/>
     <item name="gold" type="color">#FFD700</item>
+    <item name="gray" type="color">#C0C0C0</item>
     <item name="green" type="color">#FF99CC00</item>
     <!-- From: file:/C:/Users/Elliot/AndroidStudioProjects/CPPParkingAssistant/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/values/values.xml -->
     <eat-comment/>
@@ -117,6 +125,11 @@
     <color name="secondary_text_default_material_light">#8a000000</color>
     <color name="secondary_text_disabled_material_dark">#36ffffff</color>
     <color name="secondary_text_disabled_material_light">#24000000</color>
+    <!-- From: file:/C:/Users/Elliot/AndroidStudioProjects/CPPParkingAssistant/app/src/main/res/values/colors.xml -->
+    <eat-comment/>
+    <item name="skyblue" type="color">#246BB2</item>
+    <!-- From: file:/C:/Users/Elliot/AndroidStudioProjects/CPPParkingAssistant/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/values/values.xml -->
+    <eat-comment/>
     <color name="switch_thumb_normal_material_dark">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_light">#fff1f1f1</color>
     <!-- From: file:/C:/Users/Elliot/AndroidStudioProjects/CPPParkingAssistant/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.0.0/res/values/wallet_colors.xml -->
@@ -134,6 +147,9 @@
     <color name="wallet_hint_foreground_holo_light">#808080</color>
     <color name="wallet_holo_blue_light">#ff33b5e5</color>
     <color name="wallet_link_text_light">#0000ee</color>
+    <!-- From: file:/C:/Users/Elliot/AndroidStudioProjects/CPPParkingAssistant/app/src/main/res/values/colors.xml -->
+    <eat-comment/>
+    <item name="white" type="color">#FFFFFF</item>
     <declare-styleable name="ActionBar"><attr name="navigationMode"><enum name="normal" value="0"/><enum name="listMode" value="1"/><enum name="tabMode" value="2"/></attr><attr name="displayOptions"><flag name="none" value="0"/><flag name="useLogo" value="0x1"/><flag name="showHome" value="0x2"/><flag name="homeAsUp" value="0x4"/><flag name="showTitle" value="0x8"/><flag name="showCustom" value="0x10"/><flag name="disableHome" value="0x20"/></attr><attr name="title"/><attr format="string" name="subtitle"/><attr format="reference" name="titleTextStyle"/><attr format="reference" name="subtitleTextStyle"/><attr format="reference" name="icon"/><attr format="reference" name="logo"/><attr format="reference" name="divider"/><attr format="reference" name="background"/><attr format="reference|color" name="backgroundStacked"/><attr format="reference|color" name="backgroundSplit"/><attr format="reference" name="customNavigationLayout"/><attr name="height"/><attr format="reference" name="homeLayout"/><attr format="reference" name="progressBarStyle"/><attr format="reference" name="indeterminateProgressStyle"/><attr format="dimension" name="progressBarPadding"/><attr name="homeAsUpIndicator"/><attr format="dimension" name="itemPadding"/><attr format="boolean" name="hideOnContentScroll"/><attr format="dimension" name="contentInsetStart"/><attr format="dimension" name="contentInsetEnd"/><attr format="dimension" name="contentInsetLeft"/><attr format="dimension" name="contentInsetRight"/><attr format="dimension" name="elevation"/><attr format="reference" name="popupTheme"/></declare-styleable>
     <declare-styleable name="ActionBarLayout"><attr name="android:layout_gravity"/></declare-styleable>
     <declare-styleable name="ActionMenuItemView"><attr name="android:minWidth"/></declare-styleable>
@@ -297,6 +313,7 @@ available. Please contact the developer for assistance.</string>
     <string name="decline">Decline</string>
     <!-- From: file:/C:/Users/Elliot/AndroidStudioProjects/CPPParkingAssistant/app/src/main/res/values/strings.xml -->
     <eat-comment/>
+    <string name="delete">Delete my location from the Map</string>
     <string name="exit">Exit</string>
     <string name="femaleText">Female</string>
     <string name="form1EditText">Description about yourself and your car i.e. brown hair and red t-shirt in black Toyota Camry.</string>
@@ -336,6 +353,7 @@ available. Please contact the developer for assistance.</string>
     <!-- From: file:/C:/Users/Elliot/AndroidStudioProjects/CPPParkingAssistant/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+
         <!-- Customize your theme here. -->
     </style>
     <!-- From: file:/C:/Users/Elliot/AndroidStudioProjects/CPPParkingAssistant/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/values/values.xml -->
@@ -1193,6 +1211,18 @@ available. Please contact the developer for assistance.</string>
         <item name="android:scaleType">center</item>
         <item name="android:background">?attr/selectableItemBackground</item>
     </style>
+    <!-- From: file:/C:/Users/Elliot/AndroidStudioProjects/CPPParkingAssistant/app/src/main/res/values/themes.xml -->
+    <eat-comment/>
+    <style name="MyActionBar" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:background">@color/skyblue</item>
+        <item name="background">@color/skyblue</item>
+    </style>
+    <style name="MyTheme" parent="@style/Theme.AppCompat.Light">
+        <item name="android:actionBarStyle">@style/MyActionBar</item>
+        <item name="actionBarStyle">@style/MyActionBar</item>
+    </style>
+    <!-- From: file:/C:/Users/Elliot/AndroidStudioProjects/CPPParkingAssistant/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/values/values.xml -->
+    <eat-comment/>
     <style name="Platform.AppCompat" parent="android:Theme">
         <item name="android:windowNoTitle">true</item>
 

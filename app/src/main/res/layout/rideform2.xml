@@ -49,7 +49,7 @@
         <EditText
             android:id="@+id/broncoEditText"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="65dp"
             android:hint="@string/broncoID"
             android:background="@drawable/abc_popup_background_mtrl_mult"
             android:layout_marginLeft="10dp"

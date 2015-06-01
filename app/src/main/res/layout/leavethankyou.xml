@@ -24,5 +24,6 @@
         android:textColor="@color/gold"
         android:textSize="20sp"
         android:textStyle="bold"
+        android:padding="20dp"
         />
 </RelativeLayout>

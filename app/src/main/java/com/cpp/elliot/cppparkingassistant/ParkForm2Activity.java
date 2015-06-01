@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -25,6 +26,8 @@ import com.parse.ParseException;
 import com.parse.ParseQuery;
 
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class ParkForm2Activity extends ActionBarActivity {
     private GoogleMap map;
@@ -33,10 +36,12 @@ public class ParkForm2Activity extends ActionBarActivity {
     private String description = "";
     private String type;
     private final LatLng CPP = new LatLng(34.0564,-117.8217);
+    private Button parkForm2Button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.parkform2);
+        setTitle("");
         map = ((MapFragment) getFragmentManager().findFragmentById(R.id.parkMap)).getMap();
         CameraUpdate update = CameraUpdateFactory.newLatLngZoom(CPP, 15);
         map.animateCamera(update);
@@ -81,7 +86,7 @@ public class ParkForm2Activity extends ActionBarActivity {
                 return true;
             }
         });
-        Button parkForm2Button = (Button) findViewById(R.id.parkForm2Button);
+        parkForm2Button = (Button) findViewById(R.id.parkForm2Button);
         parkForm2Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -91,6 +96,20 @@ public class ParkForm2Activity extends ActionBarActivity {
                     b.putString("type", type);
                     b.putDouble("latitude", markerLocation.latitude);
                     b.putDouble("longitude", markerLocation.longitude);
+                    parkForm2Button.setTextColor(getResources().getColor(R.color.darkgreen));
+                    parkForm2Button.setBackgroundColor(getResources().getColor(R.color.gold));
+                    final Handler handler = new Handler();
+                    Timer t = new Timer();
+                    t.schedule(new TimerTask() {
+                        public void run() {
+                            handler.post(new Runnable() {
+                                public void run() {
+                                    parkForm2Button.setTextColor(getResources().getColor(R.color.gold));
+                                    parkForm2Button.setBackgroundColor(getResources().getColor(R.color.darkgreen));
+                                }
+                            });
+                        }
+                    }, 500);
                     intent.putExtras(b);
                     startActivity(intent);
                 } catch (Exception e) {

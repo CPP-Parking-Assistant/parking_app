@@ -2,6 +2,7 @@ package com.cpp.elliot.cppparkingassistant;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -15,6 +16,8 @@ import com.parse.ParseInstallation;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class LeaveActivity2 extends ActionBarActivity {
     Button leavingButton2;
@@ -26,6 +29,7 @@ public class LeaveActivity2 extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.leavingform2);
+        setTitle("");
         Bundle b = getIntent().getExtras();
         lat = b.getDouble("lat");
         lng = b.getDouble("lng");
@@ -40,6 +44,20 @@ public class LeaveActivity2 extends ActionBarActivity {
         leavingButton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                leavingButton2.setTextColor(getResources().getColor(R.color.darkgreen));
+                leavingButton2.setBackgroundColor(getResources().getColor(R.color.gold));
+                final Handler handler = new Handler();
+                Timer t = new Timer();
+                t.schedule(new TimerTask() {
+                    public void run() {
+                        handler.post(new Runnable() {
+                            public void run() {
+                                leavingButton2.setTextColor(getResources().getColor(R.color.gold));
+                                leavingButton2.setBackgroundColor(getResources().getColor(R.color.darkgreen));
+                            }
+                        });
+                    }
+                }, 500);
                 Calendar c = Calendar.getInstance();
                 SimpleDateFormat sdf = new SimpleDateFormat("MM-dd-yy");
                 SimpleDateFormat sdf2 = new SimpleDateFormat("HH:mm");
@@ -51,7 +69,7 @@ public class LeaveActivity2 extends ActionBarActivity {
                 lStudent.saveInBackground();
                 Bundle b = new Bundle();
                 b.putString("broncoId", broncoEditText2.getText() + "");
-                b.putString("description",leaveEditText.getText() + "");
+                b.putString("description", leaveEditText.getText() + "");
                 Intent intent = new Intent(LeaveActivity2.this, ThanksActivity2.class);
                 intent.putExtras(b);
                 startActivity(intent);

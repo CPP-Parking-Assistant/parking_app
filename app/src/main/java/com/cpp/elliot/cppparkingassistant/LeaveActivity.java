@@ -2,6 +2,7 @@ package com.cpp.elliot.cppparkingassistant;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -17,6 +18,9 @@ import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 public class LeaveActivity extends ActionBarActivity {
     private GoogleMap map;
     private final LatLng CPP = new LatLng(34.0564,-117.8217);
@@ -28,6 +32,7 @@ public class LeaveActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.leavingform);
+        setTitle("");
         map = ((MapFragment) getFragmentManager().findFragmentById(R.id.leaveMap)).getMap();
         CameraUpdate update = CameraUpdateFactory.newLatLngZoom(CPP, 15);
         map.animateCamera(update);
@@ -51,6 +56,20 @@ public class LeaveActivity extends ActionBarActivity {
                     Bundle b = new Bundle();
                     b.putDouble("lat", lat);
                     b.putDouble("lng", lng);
+                    leavingButton.setTextColor(getResources().getColor(R.color.darkgreen));
+                    leavingButton.setBackgroundColor(getResources().getColor(R.color.gold));
+                    final Handler handler = new Handler();
+                    Timer t = new Timer();
+                    t.schedule(new TimerTask() {
+                        public void run() {
+                            handler.post(new Runnable() {
+                                public void run() {
+                                    leavingButton.setTextColor(getResources().getColor(R.color.gold));
+                                    leavingButton.setBackgroundColor(getResources().getColor(R.color.darkgreen));
+                                }
+                            });
+                        }
+                    }, 500);
                     intent.putExtras(b);
                     startActivity(intent);
                 }

@@ -6,6 +6,7 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -21,13 +22,16 @@ import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 public class RideActivity1 extends ActionBarActivity {
     private LatLng myLocation;
     private LatLng rideLocation;
     private LocationManager lm;
     private GoogleMap map;
     private final LatLng CPP = new LatLng(34.0564,-117.8217);
-    Button rideButton3,locationButton;
+    private Button rideButton3,locationButton;
     double lat,lng;
     String msg = "Weak Network signal. Try again in a moment";
     String msg2 = "Please give a location";
@@ -36,6 +40,7 @@ public class RideActivity1 extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.rideform1);
+        setTitle("");
         map = ((MapFragment) getFragmentManager().findFragmentById(R.id.rideMap)).getMap();
         CameraUpdate update = CameraUpdateFactory.newLatLngZoom(CPP, 15);
         map.animateCamera(update);
@@ -62,12 +67,25 @@ public class RideActivity1 extends ActionBarActivity {
         locationButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                locationButton.setTextColor(getResources().getColor(R.color.darkgreen));
+                locationButton.setBackgroundColor(getResources().getColor(R.color.gold));
+                final Handler handler = new Handler();
+                Timer t = new Timer();
+                t.schedule(new TimerTask() {
+                    public void run() {
+                        handler.post(new Runnable() {
+                            public void run() {
+                                locationButton.setTextColor(getResources().getColor(R.color.gold));
+                                locationButton.setBackgroundColor(getResources().getColor(R.color.darkgreen));
+                            }
+                        });
+                    }
+                }, 500);
                 map.clear();
                 try {
                     map.addMarker(new MarkerOptions().position(myLocation).title("My Location")).showInfoWindow();
                     rideLocation = myLocation;
-                }
-                catch(Exception e){
+                } catch (Exception e) {
                     Toast.makeText(RideActivity1.this, msg, Toast.LENGTH_LONG).show();
                 }
             }
@@ -83,6 +101,20 @@ public class RideActivity1 extends ActionBarActivity {
                     Bundle b = new Bundle();
                     b.putDouble("lat", lat);
                     b.putDouble("lng", lng);
+                    rideButton3.setTextColor(getResources().getColor(R.color.darkgreen));
+                    rideButton3.setBackgroundColor(getResources().getColor(R.color.gold));
+                    final Handler handler = new Handler();
+                    Timer t = new Timer();
+                    t.schedule(new TimerTask() {
+                        public void run() {
+                            handler.post(new Runnable() {
+                                public void run() {
+                                    rideButton3.setTextColor(getResources().getColor(R.color.gold));
+                                    rideButton3.setBackgroundColor(getResources().getColor(R.color.darkgreen));
+                                }
+                            });
+                        }
+                    }, 500);
                     intent.putExtras(b);
                     startActivity(intent);
                 }

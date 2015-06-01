@@ -2,6 +2,7 @@ package com.cpp.elliot.cppparkingassistant;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -13,6 +14,9 @@ import android.widget.EditText;
 
 import com.google.android.gms.maps.model.LatLng;
 import com.parse.ParseInstallation;
+
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class ParkForm1Activity extends ActionBarActivity {
     Button parkForm1Button;
@@ -28,6 +32,7 @@ public class ParkForm1Activity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.parkform1);
+        setTitle("");
         Bundle b = getIntent().getExtras();
         type = b.getString("type");
         location = new LatLng(b.getDouble("latitude"),b.getDouble("longitude"));
@@ -51,6 +56,20 @@ public class ParkForm1Activity extends ActionBarActivity {
         parkForm1Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                parkForm1Button.setTextColor(getResources().getColor(R.color.darkgreen));
+                parkForm1Button.setBackgroundColor(getResources().getColor(R.color.gold));
+                final Handler handler = new Handler();
+                Timer t = new Timer();
+                t.schedule(new TimerTask() {
+                    public void run() {
+                        handler.post(new Runnable() {
+                            public void run() {
+                                parkForm1Button.setTextColor(getResources().getColor(R.color.gold));
+                                parkForm1Button.setBackgroundColor(getResources().getColor(R.color.darkgreen));
+                            }
+                        });
+                    }
+                }, 500);
                 if (maleCheck.isChecked() && !femaleCheck.isChecked()) {
                     if(installation.get("Gender") == null)
                         installation.put("Gender", "Male");
@@ -77,8 +96,8 @@ public class ParkForm1Activity extends ActionBarActivity {
                 b.putString("type",type);
                 b.putString("gender", gender);
                 b.putString("description2", parkForm1EditText.getText() + "");
-                b.putDouble("latitude",location.latitude);
-                b.putDouble("longitude",location.longitude);
+                b.putDouble("latitude", location.latitude);
+                b.putDouble("longitude", location.longitude);
                 intent.putExtras(b);
                 startActivity(intent);
             }
